@@ -1,0 +1,22 @@
+/* sticky footer code */
+body {
+  display: flex;
+  min-height: 100vh;
+  
+  flex-direction: column;
+}
+
+/* sticky footer code */
+main {
+  flex: 1 0 auto;
+}
+
+/* sticky footer code/styling */
+footer {
+  flex-shrink: 0;
+
+  margin-top: 5rem;
+
+  background-color: #000;
+  color: #fff;
+}
