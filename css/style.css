@@ -20,6 +20,20 @@ header h2 {
   margin: 0;
 }
 
+section h2 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  margin: 1.5rem auto 0 auto;
+  background-color: black;
+  border-radius: 1rem;
+  width: fit-content;
+  color: white;
+  padding: .5rem;
+}
+
 nav {
   display: flex;
   padding: 1rem;
@@ -51,6 +65,27 @@ a {
 /* sticky footer code */
 main {
   flex: 1 0 auto;
+}
+
+.left-side {
+  width: 500px;
+  height: 600px;
+  background-color: aliceblue;
+  margin-left: 6rem;
+  margin-top: 6rem;
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.currency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  column-gap: 3.5rem;
+  row-gap: 3.5rem;
+  justify-content: center;
+  justify-items: center;
+  grid-auto-rows: minmax(80px, 90px);
+  margin-top: 4rem;
 }
 
 /* sticky footer code/styling */
