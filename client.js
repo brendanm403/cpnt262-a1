@@ -293,3 +293,16 @@ const deleteCurrencyItem = function() {
     }
   })  
 }
+
+// main function to pass into setInterval to control everything //
+const spawnItems = function() {
+  shuffleArray(currencyArr);
+  selectCurrencyItems(currencyArr);
+  getHighestValue(currencyArr);
+  createCurrencyItem(currencyArr);
+  resetCurrencyObject(currencyArr);
+  setTimeout(deleteCurrencyItem, 1500);
+}
+
+displayCoins();
+setInterval(spawnItems, randomRange(5000, 10000));
