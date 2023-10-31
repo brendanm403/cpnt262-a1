@@ -8,3 +8,13 @@ toggleButton.addEventListener("click", () => {
 });
 
 // ADD USER INPUT FIELD //
+
+"use strict";
+const numberFormatter = Intl.NumberFormat('en-US');
+// player coins //
+if (!localStorage.getItem("coins")) {
+  localStorage.setItem("coins", 0);
+};
+
+let coins = localStorage.getItem("coins");
+let currentHighestValue = 0;
