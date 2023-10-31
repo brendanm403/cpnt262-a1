@@ -159,3 +159,42 @@ const selectCurrencyItems = function(arr) {
     }    
   }
 }
+
+// displays the value with a text pop up when an item is clicked on //
+const displayItemValuePopUp = function(itemValue) {
+  let paragraph = document.createElement("p");
+  paragraph.setAttribute("id", "pop-up-value-text");
+  let text = document.createTextNode(`+${itemValue}`);
+  paragraph.appendChild(text);
+  paragraph.style.position = "absolute";
+  paragraph.style.left = 415 + "px";
+  paragraph.style.top =  170 + "px";
+  paragraph.style.margin = 0;
+  paragraph.style.color = "green";
+  paragraph.style.fontSize = "25px";
+  document.body.appendChild(paragraph);
+}
+
+const removeItemValuePopUp = function() {
+  document.getElementById("pop-up-value-text").remove();
+}
+
+const displayWrongChoicePopUp = function() {
+  let paragraph = document.createElement("p");
+  paragraph.setAttribute("id", "pop-up-value-text")
+  let text = document.createTextNode("X");
+  paragraph.appendChild(text);
+  paragraph.style.position = "absolute";
+  paragraph.style.left = 415 + "px";
+  paragraph.style.top =  170 + "px";
+  paragraph.style.margin = 0;
+  paragraph.style.color = "red";
+  paragraph.style.fontSize = "25px";
+  document.body.appendChild(paragraph);  
+}
+
+const increaseCoins = function(arrItem) {
+  coins =  Number(localStorage.getItem("coins"));
+      coins += arrItem.value;
+      localStorage.setItem("coins", coins);  
+}
