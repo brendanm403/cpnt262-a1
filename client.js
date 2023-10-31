@@ -18,3 +18,23 @@ if (!localStorage.getItem("coins")) {
 
 let coins = localStorage.getItem("coins");
 let currentHighestValue = 0;
+
+// plays a sound when currency item is clicked //
+const clickSound = function() {
+  const audio = new Audio;
+  audio.src = "coin-sounds/coins.mp3";
+  audio.playbackRate = 2;
+  audio.play();
+}
+
+const errorSound = function() {
+  const audio = new Audio;
+  audio.src = "coin-sounds/error.mp3";
+  audio.playbackRate = 2;
+  audio.play();  
+}
+
+// function that picks a random number in the specified range //
+const randomRange = function (min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
