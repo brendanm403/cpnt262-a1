@@ -22,14 +22,14 @@ let currentHighestValue = 0;
 // plays a sound when currency item is clicked //
 const clickSound = function() {
   const audio = new Audio;
-  audio.src = "coin-sounds/coins.mp3";
+  audio.src = "audio/coins.mp3";
   audio.playbackRate = 2;
   audio.play();
 }
 
 const errorSound = function() {
   const audio = new Audio;
-  audio.src = "coin-sounds/error.mp3";
+  audio.src = "audio/error.mp3";
   audio.playbackRate = 2;
   audio.play();  
 }
