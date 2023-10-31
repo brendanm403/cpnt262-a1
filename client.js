@@ -85,6 +85,40 @@ const ovalStone = new Currency("currency-item", 1, false, "images/oval-stone.png
 // creating array of these currency objects //
 const currencyArr = [bigNugget, bigPearl, nugget, starPiece, pearl, blueShard, greenShard, yellowShard, redShard, moonStone, leafStone, fireStone, thunderStone, waterStone, sunStone, rareCandy, starDust, duskStone, shinyStone, dawnStone, deepSeaScale, dragonScale, everStone, eviolite, floatStone, hardStone, ironBall, lightClay, ovalStone, prismScale];
 
+const getHighestValue = function(arr) {
+  let valuesArr = [];
+  currentHighestValue = 0;
+  arr.forEach(function(item) {
+    if(item.selected === true) {
+      let value = item.value;
+      valuesArr.push(value);
+      if (value > currentHighestValue) {
+        currentHighestValue = value;
+        // console.log('CHV', currentHighestValue);
+      }
+    }
+  });
+  // return valuesArr;
+  console.log(currentHighestValue);
+}
+
+const compareValues = function(event) {
+  let value = Number(event.target.attributes[0].value);  
+  // returns the true or false that comes out of this expression, simplified it from if statement //
+  return value >= currentHighestValue;
+}
+
+// randomly orders the array //
+const shuffleArray = function(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  // return arr;
+}
+
 // renders the players coins on screen //
 const displayCoins = function() {
   document.getElementById("player-coins").innerHTML = numberFormatter.format(coins);
