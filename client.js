@@ -266,3 +266,30 @@ const resetCurrencyObject = function(arr) {
     }
   });
 }
+
+// prevents the player from spam clicking as many items as they can //
+const preventClickSpam = function() {
+  const preventOn = document.querySelectorAll(".currency-item");
+  preventOn.forEach(function(item) {
+    item.classList.add("disable-click");
+  });
+}
+
+// creates the currency items that were selected by looping through the array //
+const createCurrencyItem = function(arr) {
+  arr.forEach(function(arrItem) {
+    if (arrItem.selected === true) {
+      createImg(arrItem);
+    } 
+  }); 
+}
+
+// removes the currency item from screen if it exists //
+const deleteCurrencyItem = function() {
+  let itemsOnScreen = document.querySelectorAll(".currency-item");
+  itemsOnScreen.forEach(function(item) {
+    if (item) {
+      item.remove();
+    }
+  })  
+}
