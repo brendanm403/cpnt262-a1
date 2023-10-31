@@ -232,3 +232,37 @@ const increaseCoins = function(arrItem) {
       coins += arrItem.value;
       localStorage.setItem("coins", coins);  
 }
+
+// creates an image element, sets attributes, renders on screen, adds event listener //
+const createImg = function(arrItem) {
+  let renderItem = document.createElement("img");
+  renderItem.setAttribute("itemvalue", arrItem.value);
+  renderItem.classList.add(arrItem.commonClass);
+  renderItem.src = arrItem.source;
+  document.querySelector(".currency-grid").appendChild(renderItem);
+  renderItem.addEventListener("click", function(event) {
+    preventClickSpam();
+    if (compareValues(event) === true) {
+      clickSound();
+      displayItemValuePopUp(arrItem.value);
+      setTimeout(removeItemValuePopUp, 700);
+      increaseCoins(arrItem);
+      displayCoins();
+      renderItem.remove();
+    } else {
+      errorSound();
+      displayWrongChoicePopUp();
+      setTimeout(removeItemValuePopUp, 700);
+    }
+    
+  });
+}
+
+// sets selected property back to false //
+const resetCurrencyObject = function(arr) {
+  arr.forEach(function(arrItem) {
+    if (arrItem.selected === true) {
+      arrItem.selected = false;
+    }
+  });
+}
