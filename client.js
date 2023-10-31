@@ -84,3 +84,78 @@ const ovalStone = new Currency("currency-item", 1, false, "images/oval-stone.png
 
 // creating array of these currency objects //
 const currencyArr = [bigNugget, bigPearl, nugget, starPiece, pearl, blueShard, greenShard, yellowShard, redShard, moonStone, leafStone, fireStone, thunderStone, waterStone, sunStone, rareCandy, starDust, duskStone, shinyStone, dawnStone, deepSeaScale, dragonScale, everStone, eviolite, floatStone, hardStone, ironBall, lightClay, ovalStone, prismScale];
+
+// renders the players coins on screen //
+const displayCoins = function() {
+  document.getElementById("player-coins").innerHTML = numberFormatter.format(coins);
+}
+
+// selects which items will appear, limits to 9 //
+const selectCurrencyItems = function(arr) {
+  let total = 0;
+  for (let i = 0; i <= arr.length - 1; i++) {
+    if (total < 9) {
+      if (arr[i].rarity === 10) {
+        let randNum = Math.ceil(Math.random()*300);
+        if (randNum === 1) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 9) {
+        let randNum = Math.ceil(Math.random()*280);
+        if (randNum <= 2) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 8) {
+        let randNum = Math.ceil(Math.random()*260);
+        if (randNum <= 3) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 7) {
+        let randNum = Math.ceil(Math.random()*240);
+        if (randNum <= 4) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 6) {
+        let randNum = Math.ceil(Math.random()*220);
+        if (randNum <= 5) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 5) {
+        let randNum = Math.ceil(Math.random()*200);
+        if (randNum <= 6) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 4) {
+        let randNum = Math.ceil(Math.random()*180);
+        if (randNum <= 7) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 3) {
+        let randNum = Math.ceil(Math.random()*160);
+        if (randNum <= 8) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 2) {
+        let randNum = Math.ceil(Math.random()*140);
+        if (randNum <= 10) {
+          arr[i].selected = true;
+          total++;
+        } 
+      } else if (arr[i].rarity === 1) {
+        let randNum = Math.ceil(Math.random()*100);
+        if (randNum <= 50) {
+          arr[i].selected = true;
+          total++;
+        } 
+      }
+    }    
+  }
+}
