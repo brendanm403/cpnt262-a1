@@ -38,3 +38,49 @@ const errorSound = function() {
 const randomRange = function (min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 };
+
+// constructor function to make currency item objects //
+function Currency(commonClass, rarity, selected, source, value) {
+  this.commonClass = commonClass;
+  this.rarity = rarity;
+  this.selected = selected;
+  this.source = source;
+  this.value = value;
+};
+
+// making all the objects //
+const bigNugget = new Currency("currency-item", 10, false, "images/big-nugget.png", 10000);
+const bigPearl = new Currency("currency-item", 9, false, "images/big-pearl.png", 8000);
+const rareCandy = new Currency("currency-item", 8, false, "images/rare-candy.png", 5000);
+const nugget = new Currency("currency-item", 7, false, "images/nugget.png", 1000);
+const starPiece = new Currency("currency-item", 7, false, "images/star-piece.png", 1000);
+const pearl = new Currency("currency-item", 6, false, "images/pearl.png", 700);
+const starDust = new Currency("currency-item", 6, false, "images/star-dust.png", 700);
+const moonStone = new Currency("currency-item", 5, false, "images/moon-stone.png", 400);
+const sunStone = new Currency("currency-item", 5, false, "images/sun-stone.png", 400);
+const dawnStone = new Currency("currency-item", 4, false, "images/dawn-stone.png", 300);
+
+const shinyStone = new Currency("currency-item", 4, false, "images/shiny-stone.png", 300);
+const duskStone = new Currency("currency-item", 4, false, "images/dusk-stone.png", 300);
+const waterStone = new Currency("currency-item", 3, false, "images/water-stone.png", 200);
+const leafStone = new Currency("currency-item", 3, false, "images/leaf-stone.png", 200);
+const thunderStone = new Currency("currency-item", 3, false, "images/thunder-stone.png", 200);
+const fireStone = new Currency("currency-item", 3, false, "images/fire-stone.png", 200);
+const redShard = new Currency("currency-item", 1, false, "images/red-shard.png", 10);
+const yellowShard = new Currency("currency-item", 1, false, "images/yellow-shard.png", 10);
+const blueShard = new Currency("currency-item", 1, false, "images/blue-shard.png", 15);
+const greenShard = new Currency("currency-item", 1, false, "images/green-shard.png", 15);
+
+const deepSeaScale = new Currency("currency-item", 3, false, "images/deep-sea-scale.png", 250);
+const dragonScale = new Currency("currency-item", 3, false, "images/dragon-scale.png", 250);
+const prismScale = new Currency("currency-item", 3, false, "images/prism-scale.png", 250);
+const everStone = new Currency("currency-item", 1, false, "images/everstone.png", 5);
+const eviolite = new Currency("currency-item", 2, false, "images/eviolite.png", 20);
+const floatStone = new Currency("currency-item", 1, false, "images/float-stone.png", 5);
+const hardStone = new Currency("currency-item", 1, false, "images/hard-stone.png", 8);
+const ironBall = new Currency("currency-item", 1, false, "images/iron-ball.png", 8);
+const lightClay = new Currency("currency-item", 2, false, "images/light-clay.png", 20);
+const ovalStone = new Currency("currency-item", 1, false, "images/oval-stone.png", 5);
+
+// creating array of these currency objects //
+const currencyArr = [bigNugget, bigPearl, nugget, starPiece, pearl, blueShard, greenShard, yellowShard, redShard, moonStone, leafStone, fireStone, thunderStone, waterStone, sunStone, rareCandy, starDust, duskStone, shinyStone, dawnStone, deepSeaScale, dragonScale, everStone, eviolite, floatStone, hardStone, ironBall, lightClay, ovalStone, prismScale];
