@@ -158,6 +158,16 @@ main {
   margin-left: 0.5rem;
 }
 
+.currency-item {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;  
+}
+
+.disable-click {
+  pointer-events: none;
+}
+
 div p {
   margin: 0 0 0 360px;
 }
