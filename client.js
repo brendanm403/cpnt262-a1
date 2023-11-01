@@ -126,7 +126,6 @@ const shuffleArray = function(arr) {
     arr[i] = arr[j];
     arr[j] = temp;
   }
-  // return arr;
 }
 
 // renders the players coins on screen //
@@ -267,7 +266,6 @@ const createImg = function(arrItem) {
       displayWrongChoicePopUp();
       setTimeout(removeItemValuePopUp, 700);
     }
-    
   });
 }
 
