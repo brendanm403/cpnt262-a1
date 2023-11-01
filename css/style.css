@@ -78,6 +78,10 @@ button {
   margin: 0.5rem auto;
 }
 
+footer p {
+  text-align: center;
+}
+
 /* sticky footer code */
 main {
   flex: 1 0 auto;
