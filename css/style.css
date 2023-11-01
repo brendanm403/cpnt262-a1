@@ -15,25 +15,6 @@ header {
   color: #fff;
 }
 
-header h2 {
-  padding: 1rem;
-  margin: 0;
-}
-
-section h2 {
-  text-align: center;
-}
-
-h4 {
-  text-align: center;
-  margin: 1.5rem auto 0 auto;
-  background-color: black;
-  border-radius: 1rem;
-  width: fit-content;
-  color: white;
-  padding: .5rem;
-}
-
 nav {
   display: flex;
   padding: 1rem;
@@ -62,6 +43,25 @@ a {
   color: #fff;
 }
 
+header h2 {
+  margin: 0;
+  padding: 1rem;
+}
+
+section h2 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  margin: 1.5rem auto 0 auto;
+  background-color: black;
+  border-radius: 1rem;
+  width: fit-content;
+  color: white;
+  padding: .5rem;
+}
+
 article {
   display: flex;
 
@@ -72,9 +72,22 @@ article h3 {
   margin: 12px 0;
 }
 
+button {
+  width: fit-content;
+  height: fit-content;
+  margin: 0.5rem auto;
+}
+
 /* sticky footer code */
 main {
   flex: 1 0 auto;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
 }
 
 .left-side {
@@ -98,28 +111,11 @@ main {
   margin-top: 4rem;
 }
 
-.content-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  
-}
-
-.reference-img {
-  display: block;
-  width: 35px;
-  height: 35px;
-  margin-top: 12px;
-
-}
-
 #grid-container {
   display: grid;
 /* necessary for grid slide toggle */
   grid-template-rows: 0fr;
   transition: grid-template-rows 1200ms ease-in-out;
-  /* background-color: black; */
-  /* color: white; */
   margin: 1rem;
   padding: 1rem;
 }
@@ -136,26 +132,22 @@ main {
   display: flex;
   background-color: #fff;
   border: 3px solid #000;
-  border-radius: 1rem;
-  
+  border-radius: 1rem; 
 }
 
 .item-group {
   padding: 1rem;
 }
 
+.reference-img {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-top: 12px;
+}
+
 .item-value {
   color: green;
-}
-
-.arrow-button {
-  display: flex;
-  /* align-items: center; */
-}
-
-.fa-angle-down {
-  margin-top: 0.5rem;
-  margin-left: 0.5rem;
 }
 
 .currency-item {
@@ -171,6 +163,7 @@ main {
 div p {
   margin: 0 0 0 360px;
 }
+
 /* sticky footer code/styling */
 footer {
   flex-shrink: 0;
