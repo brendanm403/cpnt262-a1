@@ -1,3 +1,16 @@
+# CSS Toggles
+- client.js line 284, preventClickSpam function. Adds class to disable pointer events. This function is called on line 257 in the click handler.
+- client.js line 15, gridSlide function. Shows and hides the item reference on the right half of the screen. This function is called on line 321.
+
+## Bugs
+- Player was able to click multiple items per cycle, fixed with css class toggle.
+- [disable pointer](https://css-tricks.com/almanac/properties/p/pointer-events/)
+- Array would always be in same order resulting in limited variance of where items would appear on the grid, fixed with an array shuffle function.
+- [shuffle array](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj)
+- audio files would not play on github pages. Found new files (mp3 instead of ogg) to fix.
+- Current unfixed bug: if the game is not played on a screen large enough to display the items on the left and the item reference on the right (the reference has wrapped underneath) then the pop ups will display in the wrong spot instead of next to the coins.
+
+## Attributions 
 - [poke ball](https://bulbapedia.bulbagarden.net/wiki/File:Dream_Pok%C3%A9_Ball_Sprite.png)
 - [rare candy](https://bulbapedia.bulbagarden.net/wiki/File:Dream_Rare_Candy_Sprite.png)
 - [sun stone](https://bulbapedia.bulbagarden.net/wiki/File:Dream_Sun_Stone_Sprite.png)
