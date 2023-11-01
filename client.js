@@ -1,5 +1,6 @@
 "use strict";
 
+// shows and hides the item reference //
 const gridSlide = function() {
   const toggleButton = document.querySelector("#toggle-grid-slide");
   toggleButton.addEventListener("click", () => {
@@ -7,8 +8,7 @@ const gridSlide = function() {
   });
 }
 
-// ADD USER INPUT FIELD //
-
+// displays the users name they entered into text input //
 const getUsersName = function() {
   let button = document.getElementById("submit-button");
   button.addEventListener("click", () => {
@@ -19,17 +19,18 @@ const getUsersName = function() {
 }
 
 
-
+// adds commas to the coin value displayed //
 const numberFormatter = Intl.NumberFormat('en-US');
-// player coins //
+// creates player coins variable in local storage //
 if (!localStorage.getItem("coins")) {
   localStorage.setItem("coins", 0);
 };
 
+// creating necessary global variables //
 let coins = localStorage.getItem("coins");
 let currentHighestValue = 0;
 
-// plays a sound when currency item is clicked //
+// plays a coin sound when correct item is clicked //
 const clickSound = function() {
   const audio = new Audio;
   audio.src = "audio/coins.mp3";
@@ -37,6 +38,7 @@ const clickSound = function() {
   audio.play();
 }
 
+// plays an error sound when incorrect item is clicked // 
 const errorSound = function() {
   const audio = new Audio;
   audio.src = "audio/error.mp3";
@@ -95,6 +97,7 @@ const ovalStone = new Currency("currency-item", 1, false, "images/oval-stone.png
 // creating array of these currency objects //
 const currencyArr = [bigNugget, bigPearl, nugget, starPiece, pearl, blueShard, greenShard, yellowShard, redShard, moonStone, leafStone, fireStone, thunderStone, waterStone, sunStone, rareCandy, starDust, duskStone, shinyStone, dawnStone, deepSeaScale, dragonScale, everStone, eviolite, floatStone, hardStone, ironBall, lightClay, ovalStone, prismScale];
 
+// gets the highest value from the group of items that spawned each time, store in global variable //
 const getHighestValue = function(arr) {
   let valuesArr = [];
   currentHighestValue = 0;
@@ -104,14 +107,12 @@ const getHighestValue = function(arr) {
       valuesArr.push(value);
       if (value > currentHighestValue) {
         currentHighestValue = value;
-        // console.log('CHV', currentHighestValue);
       }
     }
   });
-  // return valuesArr;
-  console.log(currentHighestValue);
 }
 
+// compares the value of the item thats clicked to the highest value stored in the global variable //
 const compareValues = function(event) {
   let value = Number(event.target.attributes[0].value);  
   // returns the true or false that comes out of this expression, simplified it from if statement //
@@ -219,10 +220,12 @@ const displayItemValuePopUp = function(itemValue) {
   document.body.appendChild(paragraph);
 }
 
+// removes the popup that indicates a correct or incorrect choice //
 const removeItemValuePopUp = function() {
   document.getElementById("pop-up-value-text").remove();
 }
 
+// displays a red x if choice is wrong //
 const displayWrongChoicePopUp = function() {
   let paragraph = document.createElement("p");
   paragraph.setAttribute("id", "pop-up-value-text")
@@ -237,6 +240,7 @@ const displayWrongChoicePopUp = function() {
   document.body.appendChild(paragraph);  
 }
 
+// increases players coins //
 const increaseCoins = function(arrItem) {
   coins =  Number(localStorage.getItem("coins"));
       coins += arrItem.value;
