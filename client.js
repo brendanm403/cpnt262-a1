@@ -119,7 +119,7 @@ const compareValues = function(event) {
   return value >= currentHighestValue;
 }
 
-// randomly orders the array //
+// randomly orders the array so items don't always appear in the order they are in when i made the array //
 const shuffleArray = function(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -135,7 +135,7 @@ const displayCoins = function() {
   document.getElementById("player-coins").innerHTML = numberFormatter.format(coins);
 }
 
-// selects which items will appear, limits to 9 //
+// selects which items will appear, limits to 9. Uses objects rarity value to determine chance to stock //
 const selectCurrencyItems = function(arr) {
   let total = 0;
   for (let i = 0; i <= arr.length - 1; i++) {
@@ -212,8 +212,8 @@ const displayItemValuePopUp = function(itemValue) {
   let text = document.createTextNode(`+${itemValue}`);
   paragraph.appendChild(text);
   paragraph.style.position = "absolute";
-  paragraph.style.left = 415 + "px";
-  paragraph.style.top =  170 + "px";
+  paragraph.style.left = 385 + "px";
+  paragraph.style.top =  173 + "px";
   paragraph.style.margin = 0;
   paragraph.style.color = "green";
   paragraph.style.fontSize = "25px";
@@ -232,8 +232,8 @@ const displayWrongChoicePopUp = function() {
   let text = document.createTextNode("X");
   paragraph.appendChild(text);
   paragraph.style.position = "absolute";
-  paragraph.style.left = 415 + "px";
-  paragraph.style.top =  170 + "px";
+  paragraph.style.left = 385 + "px";
+  paragraph.style.top =  173 + "px";
   paragraph.style.margin = 0;
   paragraph.style.color = "red";
   paragraph.style.fontSize = "25px";
@@ -289,8 +289,8 @@ const preventClickSpam = function() {
   });
 }
 
-// creates the currency items that were selected by looping through the array //
-const createCurrencyItem = function(arr) {
+// loops through array and calls createImg to create and append images for all items where selected property true //
+const createCurrencyItems = function(arr) {
   arr.forEach(function(arrItem) {
     if (arrItem.selected === true) {
       createImg(arrItem);
@@ -313,7 +313,7 @@ const spawnItems = function() {
   shuffleArray(currencyArr);
   selectCurrencyItems(currencyArr);
   getHighestValue(currencyArr);
-  createCurrencyItem(currencyArr);
+  createCurrencyItems(currencyArr);
   resetCurrencyObject(currencyArr);
   setTimeout(deleteCurrencyItem, 1500);
 }
