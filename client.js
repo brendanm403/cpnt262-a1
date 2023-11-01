@@ -1,15 +1,25 @@
-// PUT INTO A FUNCTION //
-// set variable for button
-const toggleButton = document.querySelector("#toggle-grid-slide");
-// add event listener to button
-toggleButton.addEventListener("click", () => {
-// toggle grid container template rows fr by toggling the class visible
-  document.querySelector("#grid-container").classList.toggle("visible");
-});
+"use strict";
+
+const gridSlide = function() {
+  const toggleButton = document.querySelector("#toggle-grid-slide");
+  toggleButton.addEventListener("click", () => {
+    document.querySelector("#grid-container").classList.toggle("visible");  
+  });
+}
 
 // ADD USER INPUT FIELD //
 
-"use strict";
+const getUsersName = function() {
+  let button = document.getElementById("submit-button");
+  button.addEventListener("click", () => {
+    let input = document.getElementById("user-input").value;
+    let renderText = document.getElementById("name");
+    renderText.innerHTML = `Hello ${input}`;
+  }); 
+}
+
+
+
 const numberFormatter = Intl.NumberFormat('en-US');
 // player coins //
 if (!localStorage.getItem("coins")) {
@@ -304,5 +314,7 @@ const spawnItems = function() {
   setTimeout(deleteCurrencyItem, 1500);
 }
 
+getUsersName();
+gridSlide();
 displayCoins();
 setInterval(spawnItems, randomRange(5000, 10000));
