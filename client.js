@@ -1,5 +1,16 @@
 "use strict";
 
+// adds commas to the coin value displayed //
+const numberFormatter = Intl.NumberFormat('en-US');
+// creates player coins variable in local storage //
+if (!localStorage.getItem("coins")) {
+  localStorage.setItem("coins", 0);
+};
+
+// creating necessary global variables //
+let coins = localStorage.getItem("coins");
+let currentHighestValue = 0;
+
 // shows and hides the item reference //
 const gridSlide = function() {
   const toggleButton = document.querySelector("#toggle-grid-slide");
@@ -17,18 +28,6 @@ const getUsersName = function() {
     renderText.innerHTML = `Hello ${input}`;
   }); 
 }
-
-
-// adds commas to the coin value displayed //
-const numberFormatter = Intl.NumberFormat('en-US');
-// creates player coins variable in local storage //
-if (!localStorage.getItem("coins")) {
-  localStorage.setItem("coins", 0);
-};
-
-// creating necessary global variables //
-let coins = localStorage.getItem("coins");
-let currentHighestValue = 0;
 
 // plays a coin sound when correct item is clicked //
 const clickSound = function() {
