@@ -2,8 +2,8 @@
 -brendan malycky
 
 ## CSS Toggles
-- client.js line 284, preventClickSpam function. Adds class to disable pointer events. This function is called on line 257 in the click handler.
-- client.js line 15, gridSlide function. Shows and hides the item reference on the right half of the screen. This function is called on line 321.
+- client.js line 282, preventClickSpam function. Adds class to disable pointer events. This function is called on line 256 in the click handler.
+- client.js line 15, gridSlide function. Shows and hides the item reference on the right half of the screen. This function is called on line 319.
 
 ## Bugs
 - Player was able to click multiple items per cycle, fixed with css class toggle. [disable pointer](https://css-tricks.com/almanac/properties/p/pointer-events/)
