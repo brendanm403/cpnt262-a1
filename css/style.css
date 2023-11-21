@@ -1,52 +1,11 @@
-/* sticky footer code */
-body {
-  display: flex;
-  min-height: 100vh;
-  
-  flex-direction: column;
-}
 
-header {
-  display: flex;
 
-  justify-content: space-evenly;
 
-  background-color: #000;
-  color: #fff;
-}
 
-nav {
-  display: flex;
-  padding: 1rem;
-}
 
-ul {
-  display: flex;
 
-  gap: 3rem;
-  align-items: center;
-}
 
-ul > div {
-  display: flex;
-  align-items: center;
-}
 
-ul img {
-  display: block;
-  width: 22px;
-}
-
-a {
-  padding: 1rem;
-
-  color: #fff;
-}
-
-header h2 {
-  margin: 0;
-  padding: 1rem;
-}
 
 section h2 {
   text-align: center;
@@ -78,14 +37,7 @@ button {
   margin: 0.5rem auto;
 }
 
-footer p {
-  text-align: center;
-}
 
-/* sticky footer code */
-main {
-  flex: 1 0 auto;
-}
 
 .content-container {
   display: flex;
@@ -168,12 +120,3 @@ div p {
   margin: 0 0 0 360px;
 }
 
-/* sticky footer code/styling */
-footer {
-  flex-shrink: 0;
-
-  margin-top: 5rem;
-
-  background-color: #000;
-  color: #fff;
-}
