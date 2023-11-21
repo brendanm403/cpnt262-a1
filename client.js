@@ -19,16 +19,6 @@ const gridSlide = function() {
   });
 }
 
-// displays the users name they entered into text input //
-const getUsersName = function() {
-  let button = document.getElementById("submit-button");
-  button.addEventListener("click", () => {
-    let input = document.getElementById("user-input").value;
-    let renderText = document.getElementById("name");
-    renderText.innerHTML = `Hello ${input}`;
-  }); 
-}
-
 // plays a coin sound when correct item is clicked //
 const clickSound = function() {
   const audio = new Audio;
@@ -323,9 +313,6 @@ const spawnItems = function() {
   setTimeout(deleteCurrencyItem, 1500);
 }
 
-getUsersName();
 gridSlide();
 displayCoins();
 setInterval(spawnItems, randomRange(5000, 10000));
-
-console.log(getCoinsPosition().x);
