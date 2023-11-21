@@ -203,6 +203,14 @@ const selectCurrencyItems = function(arr) {
   }
 }
 
+// get the x y coordinates of the coins heading //
+const getCoinsPosition = function() {
+  let element = document.querySelector("h4");
+  let xPos = element.offsetLeft;
+  let yPos = element.offsetTop;
+  return {x: xPos, y: yPos};
+}
+
 // displays the value with a text pop up when an item is clicked on //
 const displayItemValuePopUp = function(itemValue) {
   let paragraph = document.createElement("p");
@@ -210,8 +218,8 @@ const displayItemValuePopUp = function(itemValue) {
   let text = document.createTextNode(`+${itemValue}`);
   paragraph.appendChild(text);
   paragraph.style.position = "absolute";
-  paragraph.style.left = 385 + "px";
-  paragraph.style.top =  173 + "px";
+  paragraph.style.left = getCoinsPosition().x + 160 + "px";
+  paragraph.style.top =  getCoinsPosition().y + "px";
   paragraph.style.margin = 0;
   paragraph.style.color = "green";
   paragraph.style.fontSize = "25px";
@@ -230,8 +238,8 @@ const displayWrongChoicePopUp = function() {
   let text = document.createTextNode("X");
   paragraph.appendChild(text);
   paragraph.style.position = "absolute";
-  paragraph.style.left = 385 + "px";
-  paragraph.style.top =  173 + "px";
+  paragraph.style.left = getCoinsPosition().x + 160 + "px";
+  paragraph.style.top =  getCoinsPosition().y + "px";
   paragraph.style.margin = 0;
   paragraph.style.color = "red";
   paragraph.style.fontSize = "25px";
@@ -319,3 +327,5 @@ getUsersName();
 gridSlide();
 displayCoins();
 setInterval(spawnItems, randomRange(5000, 10000));
+
+console.log(getCoinsPosition().x);
