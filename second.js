@@ -32,7 +32,7 @@ const createDiv = function(obj) {
 const createImg = function(obj) {
   let img = document.createElement("img");
   img.src = obj.src;
-  img.classList.add("missing-pokemon", "pokedex-entry");
+  img.classList.add("missing-pokemon", "pokedex-image");
   document.getElementById(obj.name).appendChild(img);  
 }
 
