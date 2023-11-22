@@ -1,0 +1,25 @@
+.all-pokemon-grid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(6, 130px);
+  grid-auto-rows: minmax(fit-content, 130px);
+}
+
+.missing-pokemon {
+  mix-blend-mode: luminosity;
+}
+
+.wrapper {
+  padding: 1rem;
+  background-color: white;
+  width: fit-content;
+  margin: auto;
+}
+
+footer {
+  margin-top: 0;
+}
+
+.grid-item {
+  
+}

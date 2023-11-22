@@ -14,7 +14,29 @@ const fetchPokemon = () => {
       id: data.id
     }));
     console.log(pokemonArr);
+    renderImg(pokemonArr);
+    setLocalStorageItem();
   });  
 }
 
 fetchPokemon();
+
+const renderImg = function(arr) {
+  arr.forEach(element => {
+    let img = document.createElement("img");
+    img.src = element.src;
+    img.classList.add("missing-pokemon", "grid-item");
+    document.getElementById("grid").appendChild(img);  
+  });
+}
+
+const setLocalStorageItem = function() {
+  localStorage.setItem("pidgeotto", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/17.gif");
+  let galleryPokemon = document.querySelectorAll(".grid-item")[16];
+  // galleryPokemon.forEach(pokemon => {
+  //   pokemon.src = localStorage.getItem("pidgeotto");
+  //   pokemon.classList.remove("missing-pokemon");  
+  // });
+  galleryPokemon.src = localStorage.getItem("pidgeotto");
+  galleryPokemon.classList.remove("missing-pokemon");
+}
