@@ -1,0 +1,33 @@
+article {
+  display: flex;
+
+  gap: 1rem;
+}
+
+article h3 {
+  margin: 12px 0;
+}
+
+.reference-img {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-top: 12px;
+}
+
+.item-value {
+  color: green;
+}
+
+.item-group {
+  padding: 1rem;
+}
+
+.expand-collapse {
+  width: fit-content;
+  display: flex;
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 1rem;
+  margin: 5rem auto;
+}
