@@ -14,19 +14,49 @@ const fetchPokemon = () => {
       id: data.id
     }));
     console.log(pokemonArr);
-    renderImg(pokemonArr);
-    setLocalStorageItem();
+    // renderImg(pokemonArr);
+    // setLocalStorageItem();
+    displayPokedex(pokemonArr);
   });  
 }
 
 fetchPokemon();
 
-const renderImg = function(arr) {
-  arr.forEach(element => {
-    let img = document.createElement("img");
-    img.src = element.src;
-    img.classList.add("missing-pokemon", "grid-item");
-    document.getElementById("grid").appendChild(img);  
+const createDiv = function(obj) {
+  let div = document.createElement("div");
+  div.classList.add("grid-item");
+  div.id = obj.name;
+  document.getElementById("grid").appendChild(div)
+}
+
+const createImg = function(obj) {
+  let img = document.createElement("img");
+  img.src = obj.src;
+  img.classList.add("missing-pokemon", "pokedex-entry");
+  document.getElementById(obj.name).appendChild(img);  
+}
+
+const createNameText = function(obj) {
+  let pTag = document.createElement("p");
+  let pokemonName = document.createTextNode(obj.name);
+  pTag.appendChild(pokemonName);
+  document.getElementById(obj.name).appendChild(pTag);
+}
+
+const createNumberText = function(obj) {
+  let pTag = document.createElement("p");
+  let pokemonNumber = document.createTextNode(obj.id);
+  pTag.classList.add("dex-number");
+  pTag.appendChild(pokemonNumber);
+  document.getElementById(obj.name).appendChild(pTag);
+}
+
+const displayPokedex = function(arr) {
+  arr.forEach(pokemon => {
+    createDiv(pokemon);
+    createImg(pokemon);
+    createNameText(pokemon);
+    createNumberText(pokemon);
   });
 }
 

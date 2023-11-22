@@ -16,12 +16,26 @@
   margin: auto;
 }
 
+p {
+  text-align: center;
+  margin: 0;
+}
+
 footer {
   margin-top: 0;
 }
 
 .grid-item {
   
+}
+
+.pokedex-entry {
+  display: block;
+  margin: auto;
+}
+
+.dex-number {
+  font-size: 14px;
 }
 
 @media screen and (width < 68rem) {
