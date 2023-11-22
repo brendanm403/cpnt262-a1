@@ -26,6 +26,7 @@ article h3 {
 .expand-collapse {
   width: fit-content;
   display: flex;
+  flex-wrap: wrap;
   background-color: #fff;
   border: 3px solid #000;
   border-radius: 1rem;
