@@ -73,3 +73,17 @@ footer {
   }  
 }
 
+@media screen and (width < 35rem) {
+  .all-pokemon-grid {
+    grid-template-columns: repeat(3, 80px);  
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .dex-number {
+    font-size: 12px;
+  }
+}
+
