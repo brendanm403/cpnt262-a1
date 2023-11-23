@@ -48,6 +48,10 @@ fetchPokemon();
  
 // }
 
+const displayCoins = function(coins) {
+  document.getElementById("player-coins").innerHTML = numberFormatter.format(coins);
+}
+
 const suffleArray = function(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -116,12 +120,18 @@ const createButton = function(obj) {
         if (playerCoins < price || playerCoins < inputValue) {
           alert("insufficient funds");
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
+          playerCoins = playerCoins - inputValue;
+          localStorage.setItem("coins", playerCoins);
+          displayCoins(playerCoins);
           alert("u got it");
         } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
         } else if (inputValue < price && inputValue >= price * 0.75) {
           let num = Math.ceil(Math.random() * 100);
           if (num <= 75) {
+            playerCoins = playerCoins - inputValue;
+            localStorage.setItem("coins", playerCoins);
+            displayCoins(playerCoins);
             alert("u got it");
           } else {
             alert("Offer too low");
