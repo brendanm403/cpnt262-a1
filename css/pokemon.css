@@ -38,16 +38,17 @@
 .buttonStyle {
   display: block;
   margin: 1rem auto;
-  background-color: hsl(240, 100%, 75%);
+  background-color: hsl(240, 100%, 60%);
   border-radius: 0.8rem;
   border-style: solid;
   border-color: black;
   padding: 4px 6px;
   cursor: pointer;
+  color: hsl(54, 100%, 45%);
 }
 
 .buttonStyle:hover {
-  background-color: hsl(240, 100%, 68%);
+  background-color: hsl(240, 100%, 70%);
   transform: scale(1.3);
 }
 
