@@ -33,20 +33,9 @@ const fetchPokemon = () => {
 
 fetchPokemon();
   
-// function checkId(arr) {
-//   arr.forEach(element => {
-//     console.log(element.src);
-//   });
-// }
-
-// function renderImg(arr) {
-//  arr.forEach(element => { 
-//   let poke = document.createElement("img");
-//   poke.src = element.src;
-//   document.body.appendChild(poke); 
-//  }); 
- 
-// }
+function randomRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
 
 const displayCoins = function(coins) {
   document.getElementById("player-coins").innerHTML = numberFormatter.format(coins);
