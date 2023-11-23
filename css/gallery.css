@@ -3,6 +3,7 @@
   gap: 3rem;
   grid-template-columns: repeat(6, 130px);
   grid-auto-rows: minmax(fit-content, 130px);
+  align-items: center;
 }
 
 .missing-pokemon {
@@ -31,7 +32,7 @@ footer {
 
 .pokedex-image {
   display: block;
-  margin: auto;
+  margin: 0 auto 1rem auto;
 }
 
 .dex-number {
