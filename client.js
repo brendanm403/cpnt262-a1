@@ -11,13 +11,6 @@ if (!localStorage.getItem("coins")) {
 let coins = localStorage.getItem("coins");
 let currentHighestValue = 0;
 
-// shows and hides the item reference //
-const gridSlide = function() {
-  const toggleButton = document.querySelector("#toggle-grid-slide");
-  toggleButton.addEventListener("click", () => {
-    document.querySelector("#grid-container").classList.toggle("visible");  
-  });
-}
 
 // plays a coin sound when correct item is clicked //
 const clickSound = function() {
@@ -313,6 +306,5 @@ const spawnItems = function() {
   setTimeout(deleteCurrencyItem, 1500);
 }
 
-gridSlide();
 displayCoins();
 setInterval(spawnItems, randomRange(5000, 10000));
