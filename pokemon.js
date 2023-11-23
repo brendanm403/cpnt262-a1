@@ -120,9 +120,11 @@ const createButton = function(obj) {
         if (playerCoins < price || playerCoins < inputValue) {
           alert("insufficient funds");
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
+          TODO: // move coin value change into a function //
           playerCoins = playerCoins - inputValue;
           localStorage.setItem("coins", playerCoins);
           displayCoins(playerCoins);
+          boughtPokemon(buttonClicked);
           alert("u got it");
         } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
@@ -181,6 +183,16 @@ const removePokemon = function() {
   console.log(pokemonOnScreen);
   pokemonOnScreen.forEach(pokemon => {
     pokemon.remove();
+  })
+}
+
+const boughtPokemon = function(str) {
+  pokemonArr.forEach(pokemon => {
+    if (pokemon.name === str) {
+      if(!localStorage.getItem(str)) {
+        localStorage.setItem(str, pokemon.src);
+      }
+    }
   })
 }
 
