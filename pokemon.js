@@ -21,8 +21,8 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    // setInterval(mainGame, 10000);
-    mainGame();
+    setInterval(mainGame, 10000);
+    // mainGame();
     console.log(pokemonArr);
     
 
@@ -199,7 +199,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  // setTimeout(removePokemon, 2800);
+  setTimeout(removePokemon, 2900);
 }
 
 // console.log(Number(localStorage.getItem("coins")));

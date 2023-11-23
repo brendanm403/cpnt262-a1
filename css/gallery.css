@@ -26,9 +26,12 @@ footer {
   margin-top: 0;
 }
 
-.grid-item {
- 
+h1 {
+  text-align: center;
+  margin-bottom: 5rem;
 }
+
+
 
 .pokedex-image {
   display: block;
