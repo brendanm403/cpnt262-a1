@@ -21,8 +21,8 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, 10000);
-    // mainGame();
+    // setInterval(mainGame, 10000);
+    mainGame();
     console.log(pokemonArr);
     
 
@@ -110,9 +110,12 @@ const createButton = function(obj) {
       if (buttonClicked === input.attributes[1].value) {
         let inputValue = Number(input.value);
         let price = Number(input.attributes[2].value);
+        let playerCoins = Number(localStorage.getItem("coins"));
         console.log(price);
         console.log(inputValue);
-        if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
+        if (playerCoins < price || playerCoins < inputValue) {
+          alert("insufficient funds");
+        } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
           alert("u got it");
         } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
@@ -174,5 +177,7 @@ const removePokemon = function() {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  setTimeout(removePokemon, 2800);
+  // setTimeout(removePokemon, 2800);
 }
+
+// console.log(Number(localStorage.getItem("coins")));
