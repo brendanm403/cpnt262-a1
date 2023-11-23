@@ -15,8 +15,8 @@ const fetchPokemon = () => {
     }));
     console.log(pokemonArr);
     // renderImg(pokemonArr);
-    // setLocalStorageItem();
     displayPokedex(pokemonArr);
+    displayBoughtPokemon();
   });  
 }
 
@@ -33,6 +33,7 @@ const createImg = function(obj) {
   let img = document.createElement("img");
   img.src = obj.src;
   img.classList.add("missing-pokemon", "pokedex-image");
+  img.setAttribute("name", obj.name + obj.id);
   document.getElementById(obj.name).appendChild(img);  
 }
 
@@ -60,13 +61,20 @@ const displayPokedex = function(arr) {
   });
 }
 
-const setLocalStorageItem = function() {
-  localStorage.setItem("pidgeotto", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/17.gif");
-  let galleryPokemon = document.querySelectorAll(".grid-item")[16];
+const displayBoughtPokemon = function() {
+  let galleryPokemon = document.querySelectorAll(".pokedex-image");
+  console.log(galleryPokemon);
+  galleryPokemon.forEach(pokemon => {
+    let pokemonName = pokemon.name;
+    if (localStorage.getItem(pokemon.name)) {
+      pokemon.src = localStorage.getItem(pokemon.name);
+      pokemon.classList.remove("missing-pokemon");
+    }
+  })
   // galleryPokemon.forEach(pokemon => {
   //   pokemon.src = localStorage.getItem("pidgeotto");
   //   pokemon.classList.remove("missing-pokemon");  
   // });
-  galleryPokemon.src = localStorage.getItem("pidgeotto");
-  galleryPokemon.classList.remove("missing-pokemon");
+  // galleryPokemon.src = localStorage.getItem("pidgeotto");
+  // galleryPokemon.classList.remove("missing-pokemon");
 }
