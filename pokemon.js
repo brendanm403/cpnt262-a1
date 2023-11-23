@@ -190,7 +190,7 @@ const boughtPokemon = function(str) {
   pokemonArr.forEach(pokemon => {
     if (pokemon.name === str) {
       if(!localStorage.getItem(str)) {
-        localStorage.setItem(str, pokemon.src);
+        localStorage.setItem(str + pokemon.id, pokemon.src);
       }
     }
   })
