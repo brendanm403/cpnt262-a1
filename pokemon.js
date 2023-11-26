@@ -227,6 +227,7 @@ const createPriceText = function(obj) {
   let pElement = document.createElement("p");
   let formatPrice = numberFormatter.format(extraData.get(obj.name).price);
   let pokemonPrice = document.createTextNode(`$${formatPrice}`);
+  pElement.classList.add("price-text");
   pElement.appendChild(pokemonPrice);  
   document.getElementById(obj.id).appendChild(pElement);
 }

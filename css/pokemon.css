@@ -1,3 +1,11 @@
+p {
+  margin-bottom: 0;
+}
+
+.price-text {
+  margin: 0;
+}
+
 .shop-container {
   width: fit-content;
   height: fit-content;
@@ -13,7 +21,7 @@
   display: grid;
   grid-template-columns: repeat(4, 130px);
   column-gap: 3.5rem;
-  row-gap: 1rem;
+  row-gap: 4rem;
   justify-content: center;
   justify-items: center;
   grid-auto-rows: minmax(fit-content, 130px);
