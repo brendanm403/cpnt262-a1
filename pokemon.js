@@ -323,26 +323,15 @@ const createButton = function(obj) {
               div.remove();
               alert(`Too slow! ${obj.name} is sold out!`);
             }
-        } else if (inputValue > Math.ceil(1.5 * price)) {
+        } 
+        else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
-        } else if (inputValue < price && inputValue >= price * 0.75) {
-          let num = Math.ceil(Math.random() * 100);
-          if (num <= 75) {
-            playerCoins = playerCoins - inputValue;
-            localStorage.setItem("coins", playerCoins);
-            displayCoins(playerCoins);
-            boughtPokemon(buttonClicked);
-            alert("u got it");
-          } else {
-            alert("Offer too low");
-          }
-        } else if (inputValue < price * 0.75) {
+        } 
+        else if (inputValue < price) {
           alert("offer toooooo low");
         }
       }
     })
-    // console.log(buttonClicked);
-    // console.log(inputs);
   })
 }
 
