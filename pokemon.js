@@ -276,23 +276,14 @@ const createButton = function(obj) {
           alert("insufficient funds");
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
             if (pokemonRarity >= 30 && timeToPurchase < 8) {
-              TODO: // move coin value change into a function //
-              playerCoins = playerCoins - inputValue;
-              localStorage.setItem("coins", playerCoins);
-              displayCoins(playerCoins);
-              boughtPokemon(buttonClicked);
-              div.remove();
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
               alert("u got it");
             } else if(pokemonRarity >= 20 && pokemonRarity < 30 && timeToPurchase < 6) {
-              playerCoins = playerCoins - inputValue;
-              localStorage.setItem("coins", playerCoins);
-              displayCoins(playerCoins);
-              boughtPokemon(buttonClicked);
-              div.remove();
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
               alert("u got it");
             } else {
               div.remove();
-              alert("Too slow! Its Sold Out!");
+              alert(`Too slow! ${obj.name} is sold out!`);
             }
         } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
@@ -385,4 +376,12 @@ const purchaseTime = function(start, end) {
   let timeSpent = (end-start)/1000;
   console.log(timeSpent);
   return timeSpent;
+}
+
+const updateChanges = function(coins, buttonName, divToRemove, inputVal) {
+  coins = coins - inputVal;
+  localStorage.setItem("coins", coins);
+  displayCoins(coins);
+  boughtPokemon(buttonName);
+  divToRemove.remove();
 }
