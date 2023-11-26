@@ -14,9 +14,9 @@ h4 {
 
 .content-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  
+  gap: 3rem;
 }
 
 .left-side {
