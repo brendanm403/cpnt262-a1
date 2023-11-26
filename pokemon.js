@@ -275,13 +275,51 @@ const createButton = function(obj) {
         if (playerCoins < inputValue) {
           alert("insufficient funds");
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
-            if (pokemonRarity >= 30 && timeToPurchase < 8) {
+            if (pokemonRarity === 60 && timeToPurchase < 15) {
               updateChanges(playerCoins, buttonClicked, div, inputValue);
-              alert("u got it");
-            } else if(pokemonRarity >= 20 && pokemonRarity < 30 && timeToPurchase < 6) {
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 50 && pokemonRarity < 60 && timeToPurchase < 12) {
               updateChanges(playerCoins, buttonClicked, div, inputValue);
-              alert("u got it");
-            } else {
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 40 && pokemonRarity < 50 && timeToPurchase < 9) {
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 30 && pokemonRarity < 40 && timeToPurchase < 6){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 20 && pokemonRarity < 30 && timeToPurchase < 4){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 10 && pokemonRarity < 20 && timeToPurchase < 3.5){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 8 && pokemonRarity < 10 && timeToPurchase < 3.3){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            } 
+            else if(pokemonRarity >= 6 && pokemonRarity < 8 && timeToPurchase < 3.1){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            }
+            else if(pokemonRarity >= 4 && pokemonRarity < 6 && timeToPurchase < 2.9){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            }
+            else if(pokemonRarity >= 2 && pokemonRarity < 4 && timeToPurchase < 2.5){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+            } 
+            else if(pokemonRarity === 1 && timeToPurchase < 2.1){
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            }
+            else {
               div.remove();
               alert(`Too slow! ${obj.name} is sold out!`);
             }
