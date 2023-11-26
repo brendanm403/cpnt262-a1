@@ -172,8 +172,8 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, 13000);
-    // mainGame();
+    // setInterval(mainGame, 13000);
+    mainGame();
     console.log(pokemonArr);
     
 
@@ -258,6 +258,7 @@ const createButton = function(obj) {
   console.log(div);
   document.getElementById(obj.id).appendChild(button);
   let startTime = timeStart();
+  let pokemonRarity = extraData.get(obj.name).rarity;
   resetMapData(obj);
   button.addEventListener("click", (event) => {
     let buttonClicked = event.target.attributes[0].value;
@@ -274,8 +275,15 @@ const createButton = function(obj) {
         if (playerCoins < inputValue) {
           alert("insufficient funds");
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
-            if (timeToPurchase < 4) {
+            if (pokemonRarity >= 30 && timeToPurchase < 8) {
               TODO: // move coin value change into a function //
+              playerCoins = playerCoins - inputValue;
+              localStorage.setItem("coins", playerCoins);
+              displayCoins(playerCoins);
+              boughtPokemon(buttonClicked);
+              div.remove();
+              alert("u got it");
+            } else if(pokemonRarity >= 20 && pokemonRarity < 30 && timeToPurchase < 6) {
               playerCoins = playerCoins - inputValue;
               localStorage.setItem("coins", playerCoins);
               displayCoins(playerCoins);
@@ -294,6 +302,7 @@ const createButton = function(obj) {
             playerCoins = playerCoins - inputValue;
             localStorage.setItem("coins", playerCoins);
             displayCoins(playerCoins);
+            boughtPokemon(buttonClicked);
             alert("u got it");
           } else {
             alert("Offer too low");
@@ -359,7 +368,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  setTimeout(removePokemon, 7000);
+  // setTimeout(removePokemon, 7000);
 }
 
 const timeStart = function() {
