@@ -172,7 +172,7 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, 8000);
+    setInterval(mainGame, 13000);
     // mainGame();
     console.log(pokemonArr);
     
@@ -257,10 +257,13 @@ const createButton = function(obj) {
   let div = document.getElementById(obj.id);
   console.log(div);
   document.getElementById(obj.id).appendChild(button);
+  let startTime = timeStart();
   resetMapData(obj);
   button.addEventListener("click", (event) => {
     let buttonClicked = event.target.attributes[0].value;
     let inputs = document.querySelectorAll(".inputField");
+    let endTime = timeEnd();
+    let timeToPurchase = purchaseTime(startTime, endTime);
     inputs.forEach((input) => {
       if (buttonClicked === input.attributes[1].value) {
         let inputValue = Number(input.value);
@@ -271,13 +274,18 @@ const createButton = function(obj) {
         if (playerCoins < inputValue) {
           alert("insufficient funds");
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
-          TODO: // move coin value change into a function //
-          playerCoins = playerCoins - inputValue;
-          localStorage.setItem("coins", playerCoins);
-          displayCoins(playerCoins);
-          boughtPokemon(buttonClicked);
-          div.remove();
-          alert("u got it");
+            if (timeToPurchase < 4) {
+              TODO: // move coin value change into a function //
+              playerCoins = playerCoins - inputValue;
+              localStorage.setItem("coins", playerCoins);
+              displayCoins(playerCoins);
+              boughtPokemon(buttonClicked);
+              div.remove();
+              alert("u got it");
+            } else {
+              div.remove();
+              alert("Too slow! Its Sold Out!");
+            }
         } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
         } else if (inputValue < price && inputValue >= price * 0.75) {
@@ -351,7 +359,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  setTimeout(removePokemon, 3500);
+  setTimeout(removePokemon, 7000);
 }
 
 const timeStart = function() {
@@ -365,6 +373,7 @@ const timeEnd = function() {
 }
 
 const purchaseTime = function(start, end) {
-  let timeSpent = (end-start)/1000+"secs";
+  let timeSpent = (end-start)/1000;
   console.log(timeSpent);
+  return timeSpent;
 }
