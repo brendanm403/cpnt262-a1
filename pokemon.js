@@ -257,7 +257,6 @@ const createButton = function(obj) {
   let div = document.getElementById(obj.id);
   console.log(div);
   document.getElementById(obj.id).appendChild(button);
-  console.time(obj.id);
   resetMapData(obj);
   button.addEventListener("click", (event) => {
     let buttonClicked = event.target.attributes[0].value;
@@ -277,7 +276,6 @@ const createButton = function(obj) {
           localStorage.setItem("coins", playerCoins);
           displayCoins(playerCoins);
           boughtPokemon(buttonClicked);
-          console.timeEnd(obj.id);
           div.remove();
           alert("u got it");
         } else if (inputValue > Math.ceil(1.5 * price)) {
@@ -336,7 +334,6 @@ const removePokemon = function() {
   let pokemonOnScreen = document.querySelectorAll(".grid-item");
   console.log(pokemonOnScreen);
   pokemonOnScreen.forEach(pokemon => {
-    console.timeEnd(pokemon.id);
     pokemon.remove();
   })
 }
@@ -355,4 +352,19 @@ const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
   setTimeout(removePokemon, 3500);
-} 
+}
+
+const timeStart = function() {
+  let start = Date.now();
+  return start;
+}
+
+const timeEnd = function() {
+  let end = Date.now();
+  return end;
+}
+
+const purchaseTime = function(start, end) {
+  let timeSpent = (end-start)/1000+"secs";
+  console.log(timeSpent);
+}
