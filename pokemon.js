@@ -277,8 +277,8 @@ const createButton = function(obj) {
         console.log(inputValue);
         if (playerCoins < inputValue) {
           alert("insufficient funds");
-        }
-        if (timeToPurchase > minTime) {
+          input.value = "";
+        } else if (timeToPurchase > minTime) {
           div.remove();
           alert(`Too slow! ${obj.name} is sold out!`);  
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
