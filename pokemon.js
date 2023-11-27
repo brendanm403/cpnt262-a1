@@ -277,22 +277,21 @@ const createButton = function(obj) {
         console.log(inputValue);
         if (playerCoins < inputValue) {
           alert("insufficient funds");
+        }
+        if (timeToPurchase > minTime) {
+          div.remove();
+          alert(`Too slow! ${obj.name} is sold out!`);  
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
-            if (timeToPurchase <= minTime) {
-              updateChanges(playerCoins, buttonClicked, div, inputValue);
-              alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            }
-            else {
-              div.remove();
-              alert(`Too slow! ${obj.name} is sold out!`);
-            }
+          updateChanges(playerCoins, buttonClicked, div, inputValue);
+          alert(`Congratulations! ${obj.name} has been added to your collection!`);
         } else if (inputValue < price && inputValue >= Math.ceil(price * 0.95)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 95) {
             updateChanges(playerCoins, buttonClicked, div, inputValue);
             alert(`Congratulations! ${obj.name} has been added to your collection!`);  
           } else {
-            alert("offer toooooo low"); 
+            alert("offer toooooo low");
+            input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.90)){
           let num = Math.ceil(Math.random() * 100);
@@ -301,6 +300,7 @@ const createButton = function(obj) {
             alert(`Congratulations! ${obj.name} has been added to your collection!`);  
           } else {
             alert("offer toooooo low");
+            input.value = ""; 
           } 
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.85)){
           let num = Math.ceil(Math.random() * 100);
@@ -309,6 +309,7 @@ const createButton = function(obj) {
             alert(`Congratulations! ${obj.name} has been added to your collection!`);  
           } else {
             alert("offer toooooo low");
+            input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.80)){
           let num = Math.ceil(Math.random() * 100);
@@ -317,6 +318,7 @@ const createButton = function(obj) {
             alert(`Congratulations! ${obj.name} has been added to your collection!`);  
           } else {
             alert("offer toooooo low");
+            input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.75)){
           let num = Math.ceil(Math.random() * 100);
@@ -325,11 +327,14 @@ const createButton = function(obj) {
             alert(`Congratulations! ${obj.name} has been added to your collection!`);  
           } else {
             alert("offer toooooo low");
+            input.value = ""; 
           }
         } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
+          input.value = "";
         } else if (inputValue < price) {
           alert("offer way toooooo low");
+          input.value = ""; 
         }
       }
     })
