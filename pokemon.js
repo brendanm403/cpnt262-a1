@@ -174,8 +174,8 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    // setInterval(mainGame, 13000);
-    mainGame();
+    setInterval(mainGame, 10000);
+    // mainGame();
     console.log(pokemonArr);
     
 
@@ -281,57 +281,55 @@ const createButton = function(obj) {
             if (timeToPurchase <= minTime) {
               updateChanges(playerCoins, buttonClicked, div, inputValue);
               alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            } 
-            // else if(pokemonRarity >= 50 && pokemonRarity < 60 && timeToPurchase < 12) {
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // } 
-            // else if(pokemonRarity >= 40 && pokemonRarity < 50 && timeToPurchase < 9) {
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // } 
-            // else if(pokemonRarity >= 30 && pokemonRarity < 40 && timeToPurchase < 6){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // } 
-            // else if(pokemonRarity >= 20 && pokemonRarity < 30 && timeToPurchase < 4){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // } 
-            // else if(pokemonRarity >= 10 && pokemonRarity < 20 && timeToPurchase < 3.5){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // } 
-            // else if(pokemonRarity >= 8 && pokemonRarity < 10 && timeToPurchase < 3.3){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // } 
-            // else if(pokemonRarity >= 6 && pokemonRarity < 8 && timeToPurchase < 3.1){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // }
-            // else if(pokemonRarity >= 4 && pokemonRarity < 6 && timeToPurchase < 2.9){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // }
-            // else if(pokemonRarity >= 2 && pokemonRarity < 4 && timeToPurchase < 2.5){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);  
-            // } 
-            // else if(pokemonRarity === 1 && timeToPurchase < 2.1){
-            //   updateChanges(playerCoins, buttonClicked, div, inputValue);
-            //   alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            // }
+            }
             else {
               div.remove();
               alert(`Too slow! ${obj.name} is sold out!`);
             }
-        } 
-        else if (inputValue > Math.ceil(1.5 * price)) {
+        } else if (inputValue < price && inputValue >= Math.ceil(price * 0.95)){
+          let num = Math.ceil(Math.random() * 100);
+          if (num <= 95) {
+            updateChanges(playerCoins, buttonClicked, div, inputValue);
+            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+          } else {
+            alert("offer toooooo low"); 
+          }
+        } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.90)){
+          let num = Math.ceil(Math.random() * 100);
+          if (num <= 90) {
+            updateChanges(playerCoins, buttonClicked, div, inputValue);
+            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+          } else {
+            alert("offer toooooo low");
+          } 
+        } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.85)){
+          let num = Math.ceil(Math.random() * 100);
+          if (num <= 85) {
+            updateChanges(playerCoins, buttonClicked, div, inputValue);
+            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+          } else {
+            alert("offer toooooo low");
+          }
+        } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.80)){
+          let num = Math.ceil(Math.random() * 100);
+          if (num <= 80) {
+            updateChanges(playerCoins, buttonClicked, div, inputValue);
+            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+          } else {
+            alert("offer toooooo low");
+          }
+        } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.75)){
+          let num = Math.ceil(Math.random() * 100);
+          if (num <= 75) {
+            updateChanges(playerCoins, buttonClicked, div, inputValue);
+            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+          } else {
+            alert("offer toooooo low");
+          }
+        } else if (inputValue > Math.ceil(1.5 * price)) {
           alert("thats too much!");
-        } 
-        else if (inputValue < price) {
-          alert("offer toooooo low");
+        } else if (inputValue < price) {
+          alert("offer way toooooo low");
         }
       }
     })
@@ -389,7 +387,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  // setTimeout(removePokemon, 7000);
+  setTimeout(removePokemon, 7000);
 }
 
 const timeStart = function() {
