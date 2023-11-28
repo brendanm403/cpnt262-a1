@@ -307,4 +307,4 @@ const spawnItems = function() {
 }
 
 displayCoins();
-setInterval(spawnItems, randomRange(5000, 10000));
+setInterval(spawnItems, randomRange(4000, 7000));
