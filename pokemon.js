@@ -166,16 +166,16 @@ const fetchPokemon = () => {
   Promise.all(promises).then((results) => {
      pokemonArr = results.map((data) => ({
       name: data.name,
-          src: data.sprites.versions["generation-v"]["black-white"].animated.front_default,
-          id: data.id,
-          selected: false,
-          onscreen: false
+      src: data.sprites.versions["generation-v"]["black-white"].animated.front_default,
+      id: data.id,
+      selected: false,
+      onscreen: false
     }));
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, randomRange(120000, 300000));
-    // mainGame();
+    // setInterval(mainGame, randomRange(120000, 300000));
+    mainGame();
     console.log(pokemonArr);
     
 
