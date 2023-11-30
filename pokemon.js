@@ -1,7 +1,7 @@
 let pokemonArr = []; 
 const numberFormatter = Intl.NumberFormat('en-US');
 const extraData = new Map();
-
+const modal = document.getElementById("modal");
 TODO: // reconfigure the if statement section that checks rarity and time, can put time value required in extra data
 
 extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
@@ -174,7 +174,7 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    // setInterval(mainGame, randomRange(120000, 300000));
+    // setInterval(mainGame, randomRange(7000, 8000));
     mainGame();
     console.log(pokemonArr);
     
@@ -276,64 +276,94 @@ const createButton = function(obj) {
         console.log(price);
         console.log(inputValue);
         if (playerCoins < inputValue) {
-          alert("insufficient funds");
+          // alert("insufficient funds");
+          renderModalContent(obj, timeToPurchase);
+          modal.showModal();
           input.value = "";
         } else if (timeToPurchase > minTime) {
           div.remove();
-          alert(`Too slow! ${obj.name} is sold out!`);  
+          // alert(`Too slow! ${obj.name} is sold out!`);
+          renderModalContent(obj, timeToPurchase);
+          modal.showModal(); 
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
           updateChanges(playerCoins, buttonClicked, div, inputValue);
-          alert(`Congratulations! ${obj.name} has been added to your collection!`);
+          // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+          renderModalContent(obj, timeToPurchase);
+          modal.showModal();
         } else if (inputValue < price && inputValue >= Math.ceil(price * 0.95)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 95) {
             updateChanges(playerCoins, buttonClicked, div, inputValue);
-            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();
           } else {
-            alert("offer toooooo low");
+            // alert("offer toooooo low");
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.90)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 90) {
             updateChanges(playerCoins, buttonClicked, div, inputValue);
-            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal(); 
           } else {
-            alert("offer toooooo low");
+            // alert("offer toooooo low");
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();
             input.value = ""; 
           } 
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.85)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 85) {
             updateChanges(playerCoins, buttonClicked, div, inputValue);
-            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();  
           } else {
-            alert("offer toooooo low");
+            // alert("offer toooooo low");
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.80)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 80) {
             updateChanges(playerCoins, buttonClicked, div, inputValue);
-            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal(); 
           } else {
-            alert("offer toooooo low");
+            // alert("offer toooooo low");
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.75)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 75) {
             updateChanges(playerCoins, buttonClicked, div, inputValue);
-            alert(`Congratulations! ${obj.name} has been added to your collection!`);  
+            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+            renderModalContent(obj, timeToPurchase); 
+            modal.showModal();
           } else {
-            alert("offer toooooo low");
+            // alert("offer toooooo low");
+            renderModalContent(obj, timeToPurchase);
+            modal.showModal();
             input.value = ""; 
           }
         } else if (inputValue > Math.ceil(1.5 * price)) {
-          alert("thats too much!");
+          // alert("thats too much!");
+          renderModalContent(obj, timeToPurchase);
+          modal.showModal();
           input.value = "";
         } else if (inputValue < price) {
-          alert("offer way toooooo low");
+          // alert("offer way toooooo low");
+          renderModalContent(obj, timeToPurchase);
+          modal.showModal();
           input.value = ""; 
         }
       }
@@ -392,7 +422,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  setTimeout(removePokemon, 15200);
+  // setTimeout(removePokemon, 5000);
 }
 
 const timeStart = function() {
@@ -419,7 +449,7 @@ const updateChanges = function(coins, buttonName, divToRemove, inputVal) {
   divToRemove.remove();
 }
 
-const modal = document.getElementById("modal");
+
 const openModal = document.getElementById("open-modal");
 const closeModal = document.getElementById("close-modal");
 openModal.addEventListener("click", () => {
@@ -428,3 +458,23 @@ openModal.addEventListener("click", () => {
 closeModal.addEventListener("click", () => {
   modal.close();
 })
+
+const renderModalContent = function(obj, userTime) {
+  let minTime = extraData.get(obj.name).minTime;
+  let result = document.getElementById("result");
+  let resultMessage = document.getElementById("result-message");
+  if (userTime <= minTime) {
+    result.innerHTML = "Success";
+  } 
+  if (userTime > minTime){
+    result.innerHTML = "Oops!"
+  }
+  let img = document.getElementById("modal-img");
+  // let name = document.getElementById("poke-name");
+  let rarity = document.getElementById("poke-rarity");
+  let time = document.getElementById("transaction-time");
+  img.src = obj.src;
+  // name.innerHTML = obj.name;
+  rarity.innerHTML = extraData.get(obj.name).rarity;
+  time.innerHTML = userTime + "s";
+}
