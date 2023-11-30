@@ -465,16 +465,16 @@ const renderModalContent = function(obj, userTime) {
   let resultMessage = document.getElementById("result-message");
   if (userTime <= minTime) {
     result.innerHTML = "Success";
+    resultMessage.innerHTML = `${obj.name} has been added to your collection`
   } 
   if (userTime > minTime){
     result.innerHTML = "Oops!"
+    resultMessage.innerHTML = `${obj.name} is sold out! You were too slow!`
   }
   let img = document.getElementById("modal-img");
-  // let name = document.getElementById("poke-name");
   let rarity = document.getElementById("poke-rarity");
   let time = document.getElementById("transaction-time");
   img.src = obj.src;
-  // name.innerHTML = obj.name;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
 }
