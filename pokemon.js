@@ -278,7 +278,7 @@ const createButton = function(obj) {
         console.log(inputValue);
         if (playerCoins < inputValue) {
           // alert("insufficient funds");
-          renderModal2Content(obj, timeToPurchase);
+          renderModal2Content(obj, timeToPurchase, inputValue, price, playerCoins);
           modal2.showModal();
           input.value = "";
         } else if (timeToPurchase > minTime) {
@@ -357,9 +357,9 @@ const createButton = function(obj) {
             input.value = ""; 
           }
         } else if (inputValue > Math.ceil(1.5 * price)) {
-          alert("thats too much!");
-          // renderModalContent(obj, timeToPurchase);
-          // modal.showModal();
+          // alert("thats too much!");
+          renderModal2Content(obj, timeToPurchase, inputValue, price, playerCoins);
+          modal2.showModal();
           input.value = "";
         } else if (inputValue < price) {
           alert("offer way toooooo low");
@@ -479,14 +479,20 @@ const renderModalContent = function(obj, userTime) {
   time.innerHTML = userTime + "s";
 }
 
-const renderModal2Content = function(obj, userTime) {
+const renderModal2Content = function(obj, userTime, inputValue, price, playerCoins) {
   let result = document.getElementById("result2");
   let resultMessage = document.getElementById("result-message2");
   let img = document.getElementById("modal-img2");
   let rarity = document.getElementById("poke-rarity2");
   let time = document.getElementById("transaction-time2");
-  result.innerHTML = "Insufficient Funds";
-  resultMessage.innerHTML = "You don't have enough coins to offer that much!"
+  if (playerCoins < inputValue) {
+    result.innerHTML = "Insufficient Funds";
+    resultMessage.innerHTML = "You don't have enough coins to offer that much!"
+  } else if (inputValue > Math.ceil(1.5 * price)) {
+    result.innerHTML = "Whoa! That Much?";
+    resultMessage.innerHTML = "This offer is too high! Did you mean to do that?"  
+  }
+  
   img.src = obj.src;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
