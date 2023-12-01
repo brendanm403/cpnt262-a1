@@ -72,7 +72,7 @@ dialog {
   text-align: center;
 }
 
-#modal::backdrop {
+.modals::backdrop {
   background: black;
   opacity: 0.6;
 }
