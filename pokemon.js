@@ -257,7 +257,7 @@ const createButton = function(obj) {
   let button = document.createElement("button");
   button.innerHTML = "Buy";
   button.setAttribute("pokeName", obj.name);
-  button.classList.add("buttonStyle");
+  button.classList.add("button-style");
   let div = document.getElementById(obj.id);
   console.log(div);
   document.getElementById(obj.id).appendChild(button);
@@ -465,11 +465,13 @@ const renderModalContent = function(obj, userTime) {
   let resultMessage = document.getElementById("result-message");
   if (userTime <= minTime) {
     result.innerHTML = "Success";
-    resultMessage.innerHTML = `${obj.name} has been added to your collection`
+    result.style.color = "green";
+    resultMessage.innerHTML = `${obj.name} has been added to your collection`;
   } 
   if (userTime > minTime){
-    result.innerHTML = "Oops!"
-    resultMessage.innerHTML = `${obj.name} is sold out! You were too slow!`
+    result.innerHTML = "Oops!";
+    result.style.color = "red";
+    resultMessage.innerHTML = `${obj.name} is sold out! You were too slow!`;
   }
   let img = document.getElementById("modal-img");
   let rarity = document.getElementById("poke-rarity");

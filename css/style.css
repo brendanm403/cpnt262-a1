@@ -72,6 +72,10 @@ dialog {
   text-align: center;
 }
 
+.modal-heading {
+  font-size: 32px;
+}
+
 .modals::backdrop {
   background: black;
   opacity: 0.6;

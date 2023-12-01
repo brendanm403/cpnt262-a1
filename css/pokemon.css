@@ -43,7 +43,7 @@ p {
   width: 60px;
 }
 
-.buttonStyle {
+.button-style {
   display: block;
   margin: 1rem auto;
   background-color: hsl(240, 100%, 60%);
@@ -55,12 +55,12 @@ p {
   color: hsl(54, 100%, 45%);
 }
 
-.buttonStyle:hover {
+.button-style:hover {
   background-color: hsl(240, 100%, 70%);
   transform: scale(1.3);
 }
 
-.buttonStyle:active {
+.button-style:active {
   color: white;
   background-color: hsl(240, 100%, 50%);
   transform: scale(1);
