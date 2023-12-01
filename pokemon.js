@@ -281,6 +281,11 @@ const createButton = function(obj) {
           renderModal2Content(obj, timeToPurchase, inputValue, price, playerCoins);
           modal2.showModal();
           input.value = "";
+        } else if (inputValue > Math.ceil(1.5 * price)) {
+          // alert("thats too much!");
+          renderModal2Content(obj, timeToPurchase, inputValue, price, playerCoins);
+          modal2.showModal();
+          input.value = "";
         } else if (timeToPurchase > minTime) {
           div.remove();
           // alert(`Too slow! ${obj.name} is sold out!`);
@@ -356,11 +361,6 @@ const createButton = function(obj) {
             // modal.showModal();
             input.value = ""; 
           }
-        } else if (inputValue > Math.ceil(1.5 * price)) {
-          // alert("thats too much!");
-          renderModal2Content(obj, timeToPurchase, inputValue, price, playerCoins);
-          modal2.showModal();
-          input.value = "";
         } else if (inputValue < price) {
           alert("offer way toooooo low");
           // renderModalContent(obj, timeToPurchase);
@@ -492,7 +492,6 @@ const renderModal2Content = function(obj, userTime, inputValue, price, playerCoi
     result.innerHTML = "Whoa! That Much?";
     resultMessage.innerHTML = "This offer is too high! Did you mean to do that?"  
   }
-  
   img.src = obj.src;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
