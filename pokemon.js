@@ -14,16 +14,16 @@ extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 
 .set("squirtle", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
 .set("wartortle", {rarity: 3, minTime: 2.5, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
 .set("blastoise", {rarity: 1, minTime: 2.1, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("caterpie", {rarity: 50, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("caterpie", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
 .set("metapod", {rarity: 40, minTime: 9, minPrice: 4000, maxPrice: 5500, price: randomRange(4000, 5500)})
 .set("butterfree", {rarity: 30, minTime: 6, minPrice: 6000, maxPrice: 8500, price: randomRange(6000, 8500)})
-.set("weedle", {rarity: 50, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("weedle", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
 .set("kakuna", {rarity: 40, minTime: 9, minPrice: 4000, maxPrice: 5500, price: randomRange(4000, 5500)})
 .set("beedrill", {rarity: 30, minTime: 6, minPrice: 6000, maxPrice: 8500, price: randomRange(6000, 8500)})
-.set("pidgey", {rarity: 50, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("pidgey", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
 .set("pidgeotto", {rarity: 30, minTime: 6, minPrice: 5000, maxPrice: 7000, price: randomRange(5000, 7000)})
 .set("pidgeot", {rarity: 10, minTime: 3.5, minPrice: 8000, maxPrice: 11000, price: randomRange(8000, 11000)})
-.set("rattata", {rarity: 50, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("rattata", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
 .set("raticate", {rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 6500, price: randomRange(4000, 6500)})
 .set("spearow", {rarity: 40, minTime: 9, minPrice: 3300, maxPrice: 4800, price: randomRange(3300, 4800)})
 .set("fearow", {rarity: 20, minTime: 4, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
@@ -45,7 +45,7 @@ extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 
 .set("ninetales", {rarity: 3, minTime: 2.5, minPrice: 25000, maxPrice: 28500, price: randomRange(25000, 28500)})
 .set("jigglypuff", {rarity: 40, minTime: 9, minPrice: 3000, maxPrice: 5300, price: randomRange(3000, 5300)})
 .set("wigglytuff", {rarity: 25, minTime: 4, minPrice: 8400, maxPrice: 11000, price: randomRange(8400, 11000)})
-.set("zubat", {rarity: 60, minTime: 15, minPrice: 1000, maxPrice: 1600, price: randomRange(1000, 1600)})
+.set("zubat", {rarity: 80, minTime: 15, minPrice: 1000, maxPrice: 1600, price: randomRange(1000, 1600)})
 .set("golbat", {rarity: 40, minTime: 9, minPrice: 5000, maxPrice: 6000, price: randomRange(5000, 6000)})
 .set("oddish", {rarity: 40, minTime: 9, minPrice: 3800, maxPrice: 4600, price: randomRange(3800, 4600)})
 .set("gloom", {rarity: 30, minTime: 6, minPrice: 5800, maxPrice: 7300, price: randomRange(5800, 7300)})
@@ -133,7 +133,7 @@ extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 
 .set("magmar", {rarity: 5, minTime: 2.9, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
 .set("pinsir", {rarity: 4, minTime: 2.9, minPrice: 12000, maxPrice: 14000, price: randomRange(12000, 14000)})
 .set("tauros", {rarity: 4, minTime: 2.9, minPrice: 12000, maxPrice: 14000, price: randomRange(12000, 14000)})
-.set("magikarp", {rarity: 60, minTime: 15, minPrice: 2000, maxPrice: 3000, price: randomRange(1400, 2000)})
+.set("magikarp", {rarity: 80, minTime: 15, minPrice: 1400, maxPrice: 2000, price: randomRange(1400, 2000)})
 .set("gyarados", {rarity: 2, minTime: 2.5, minPrice: 30000, maxPrice: 36500, price: randomRange(30000, 36500)})
 .set("lapras", {rarity: 2, minTime: 2.5, minPrice: 30000, maxPrice: 36500, price: randomRange(30000, 36500)})
 .set("ditto", {rarity: 10, minTime: 3.5, minPrice: 5000, maxPrice: 6800, price: randomRange(5000, 6800)})
@@ -175,8 +175,8 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    // setInterval(mainGame, randomRange(7000, 8000));
-    mainGame();
+    setInterval(mainGame, randomRange(7000, 8000));
+    // mainGame();
     console.log(pokemonArr);
     
 
@@ -423,7 +423,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  // setTimeout(removePokemon, 5000);
+  setTimeout(removePokemon, 5000);
 }
 
 const timeStart = function() {
