@@ -3,6 +3,7 @@ const numberFormatter = Intl.NumberFormat('en-US');
 const extraData = new Map();
 const modal1 = document.getElementById("modal1");
 const modal2 = document.getElementById("modal2");
+const modal3 = document.getElementById("modal3");
 TODO: // reconfigure the if statement section that checks rarity and time, can put time value required in extra data
 
 extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
@@ -175,7 +176,7 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, randomRange(7000, 8000));
+    setInterval(mainGame, randomRange(120000, 300000));
     // mainGame();
     console.log(pokemonArr);
     
@@ -304,9 +305,9 @@ const createButton = function(obj) {
             renderModalContent(obj, timeToPurchase);
             modal1.showModal();
           } else {
-            alert("offer toooooo low");
-            // renderModalContent(obj, timeToPurchase);
-            // modal.showModal();
+            // alert("offer toooooo low");
+            renderModal3Content(obj, timeToPurchase);
+            modal3.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.90)){
@@ -317,9 +318,9 @@ const createButton = function(obj) {
             renderModalContent(obj, timeToPurchase);
             modal1.showModal(); 
           } else {
-            alert("offer toooooo low");
-            // renderModalContent(obj, timeToPurchase);
-            // modal.showModal();
+            // alert("offer toooooo low");
+            renderModal3Content(obj, timeToPurchase);
+            modal3.showModal();
             input.value = ""; 
           } 
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.85)){
@@ -330,9 +331,9 @@ const createButton = function(obj) {
             renderModalContent(obj, timeToPurchase);
             modal1.showModal();  
           } else {
-            alert("offer toooooo low");
-            // renderModalContent(obj, timeToPurchase);
-            // modal.showModal();
+            // alert("offer toooooo low");
+            renderModal3Content(obj, timeToPurchase);
+            modal3.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.80)){
@@ -343,9 +344,9 @@ const createButton = function(obj) {
             renderModalContent(obj, timeToPurchase);
             modal1.showModal(); 
           } else {
-            alert("offer toooooo low");
-            // renderModalContent(obj, timeToPurchase);
-            // modal.showModal();
+            // alert("offer toooooo low");
+            renderModal3Content(obj, timeToPurchase);
+            modal3.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.75)){
@@ -356,15 +357,15 @@ const createButton = function(obj) {
             renderModalContent(obj, timeToPurchase); 
             modal1.showModal();
           } else {
-            alert("offer toooooo low");
-            // renderModalContent(obj, timeToPurchase);
-            // modal.showModal();
+            // alert("offer toooooo low");
+            renderModal3Content(obj, timeToPurchase);
+            modal3.showModal();
             input.value = ""; 
           }
         } else if (inputValue < price) {
-          alert("offer way toooooo low");
-          // renderModalContent(obj, timeToPurchase);
-          // modal.showModal();
+          // alert("offer way toooooo low");
+          renderModal3Content(obj, timeToPurchase);
+          modal3.showModal();
           input.value = ""; 
         }
       }
@@ -464,7 +465,7 @@ const boughtPokemon = function(str) {
 const mainGame = function() {
   selectPokemon(pokemonArr);
   displayOnScreen(pokemonArr);
-  setTimeout(removePokemon, 5000);
+  setTimeout(removePokemon, 15100);
 }
 
 const timeStart = function() {
@@ -493,11 +494,15 @@ const updateChanges = function(coins, buttonName, divToRemove, inputVal) {
 
 const closeModal1 = document.getElementById("close-modal");
 const closeModal2 = document.getElementById("close-modal2");
+const closeModal3 = document.getElementById("close-modal3");
 closeModal1.addEventListener("click", () => {
   modal1.close();
 })
 closeModal2.addEventListener("click", () => {
   modal2.close();
+})
+closeModal3.addEventListener("click", () => {
+  modal3.close();
 })
 
 const renderModalContent = function(obj, userTime) {
@@ -530,11 +535,27 @@ const renderModal2Content = function(obj, userTime, inputValue, price, playerCoi
   let time = document.getElementById("transaction-time2");
   if (playerCoins < inputValue) {
     result.innerHTML = "Insufficient Funds";
+    result.style.color = "orange";
     resultMessage.innerHTML = "You don't have enough coins to offer that much!"
   } else if (inputValue > Math.ceil(1.5 * price)) {
     result.innerHTML = "Whoa! That Much?";
+    result.style.color = "orange";
     resultMessage.innerHTML = "This offer is too high! Did you mean to do that?"  
   }
+  img.src = obj.src;
+  rarity.innerHTML = extraData.get(obj.name).rarity;
+  time.innerHTML = userTime + "s";
+}
+
+const renderModal3Content = function(obj, userTime) {
+  let result = document.getElementById("result3");
+  let resultMessage = document.getElementById("result-message3");
+  let img = document.getElementById("modal-img3");
+  let rarity = document.getElementById("poke-rarity3");
+  let time = document.getElementById("transaction-time3");
+  result.innerHTML = "Hey! No Deal!"
+  result.style.color = "orange";
+  resultMessage.innerHTML = "This offer is too low! Try a higher offer!";
   img.src = obj.src;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
