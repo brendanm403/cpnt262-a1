@@ -387,9 +387,50 @@ const displayOnScreen = function(arr) {
   arr.forEach(pokemonObj => {
     if (pokemonObj.selected === true) {
       let num = Math.ceil(Math.random() * 100);
+      let num2 = Math.ceil(Math.random() * 6);
       let rarity = extraData.get(pokemonObj.name).rarity;
       pokemonObj.selected = false;
-      if (num <= rarity && count < 8) {
+      if (rarity > 5 && num <= rarity && count < 8) {
+        createDiv(pokemonObj);
+        createImg(pokemonObj);
+        createNameText(pokemonObj);
+        createPriceText(pokemonObj);
+        createInput(pokemonObj);
+        createButton(pokemonObj);
+        count++;
+      } else if (rarity === 5 && num <= rarity && num2 <= 5 && count < 8) {
+        createDiv(pokemonObj);
+        createImg(pokemonObj);
+        createNameText(pokemonObj);
+        createPriceText(pokemonObj);
+        createInput(pokemonObj);
+        createButton(pokemonObj);
+        count++;
+      } else if (rarity === 4 && num <= rarity && num2 <= 4 && count < 8) {
+        createDiv(pokemonObj);
+        createImg(pokemonObj);
+        createNameText(pokemonObj);
+        createPriceText(pokemonObj);
+        createInput(pokemonObj);
+        createButton(pokemonObj);
+        count++;
+      } else if (rarity === 3 && num <= rarity && num2 <= 3 && count < 8) {
+        createDiv(pokemonObj);
+        createImg(pokemonObj);
+        createNameText(pokemonObj);
+        createPriceText(pokemonObj);
+        createInput(pokemonObj);
+        createButton(pokemonObj);
+        count++;
+      } else if (rarity === 2 && num <= rarity && num2 <= 2 && count < 8) {
+        createDiv(pokemonObj);
+        createImg(pokemonObj);
+        createNameText(pokemonObj);
+        createPriceText(pokemonObj);
+        createInput(pokemonObj);
+        createButton(pokemonObj);
+        count++;
+      } else if (rarity === 1 && num <= rarity && num2 <= 1 && count < 8) {
         createDiv(pokemonObj);
         createImg(pokemonObj);
         createNameText(pokemonObj);
