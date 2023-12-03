@@ -392,6 +392,7 @@ const selectPokemon = function (arr) {
 const displayOnScreen = function(arr) {
   let count = 0;
   suffleArray(arr);
+  hideShopContent();
   createGrid();
   arr.forEach(pokemonObj => {
     if (pokemonObj.selected === true) {
@@ -452,6 +453,14 @@ const displayOnScreen = function(arr) {
   })
 }
 
+const hideShopContent = function() {
+  document.getElementById("shop-content-container").classList.add("shop-content");
+}
+
+const showShopContent = function() {
+  document.getElementById("shop-content-container").classList.remove("shop-content");
+}
+
 const removeGrid = function() {
   document.getElementById("poke-grid").remove();
 }
@@ -463,6 +472,7 @@ const removePokemon = function() {
     pokemon.remove();
   })
   removeGrid();
+  showShopContent();
 }
 
 const boughtPokemon = function(str) {
