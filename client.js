@@ -46,8 +46,8 @@ function Currency(commonClass, rarity, selected, source, value) {
 const bigNugget = new Currency("currency-item", 10, false, "images/big-nugget.png", 10000);
 const bigPearl = new Currency("currency-item", 9, false, "images/big-pearl.png", 8000);
 const rareCandy = new Currency("currency-item", 8, false, "images/rare-candy.png", 5000);
-const nugget = new Currency("currency-item", 7, false, "images/nugget.png", 1000);
-const starPiece = new Currency("currency-item", 7, false, "images/star-piece.png", 1000);
+const nugget = new Currency("currency-item", 7, false, "images/nugget.png", 2500);
+const starPiece = new Currency("currency-item", 7, false, "images/star-piece.png", 2500);
 const pearl = new Currency("currency-item", 6, false, "images/pearl.png", 700);
 const starDust = new Currency("currency-item", 6, false, "images/star-dust.png", 700);
 const moonStone = new Currency("currency-item", 5, false, "images/moon-stone.png", 400);
