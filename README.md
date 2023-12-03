@@ -43,3 +43,4 @@
 - [yellow shard](https://bulbapedia.bulbagarden.net/wiki/File:Mine_Yellow_Shard_BDSP.png)
 - [blue shard](https://bulbapedia.bulbagarden.net/wiki/File:Mine_Blue_Shard_BDSP.png)
 - [green shard](https://bulbapedia.bulbagarden.net/wiki/File:Mine_Green_Shard_BDSP.png)
+- [prof oak](https://bulbapedia.bulbagarden.net/wiki/File:Red_Green_Prof_Oak.png)
