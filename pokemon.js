@@ -176,7 +176,7 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, randomRange(120000, 300000));
+    setInterval(mainGame, randomRange(20000, 21000));
     // mainGame();
     console.log(pokemonArr);
     
@@ -203,6 +203,13 @@ const suffleArray = function(arr) {
     arr[i] = arr[j];
     arr[j] = temp;
   }  
+}
+
+const createGrid = function() {
+  let grid = document.createElement("div");
+  grid.classList.add("pokemon-grid");
+  grid.id = "poke-grid";
+  document.querySelector(".shop-container").appendChild(grid);
 }
 
 const createDiv = function(obj) {
@@ -385,6 +392,7 @@ const selectPokemon = function (arr) {
 const displayOnScreen = function(arr) {
   let count = 0;
   suffleArray(arr);
+  createGrid();
   arr.forEach(pokemonObj => {
     if (pokemonObj.selected === true) {
       let num = Math.ceil(Math.random() * 100);
@@ -444,12 +452,17 @@ const displayOnScreen = function(arr) {
   })
 }
 
+const removeGrid = function() {
+  document.getElementById("poke-grid").remove();
+}
+
 const removePokemon = function() {
   let pokemonOnScreen = document.querySelectorAll(".grid-item");
   console.log(pokemonOnScreen);
   pokemonOnScreen.forEach(pokemon => {
     pokemon.remove();
   })
+  removeGrid();
 }
 
 const boughtPokemon = function(str) {
