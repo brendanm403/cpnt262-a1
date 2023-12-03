@@ -9,7 +9,7 @@ p {
 .shop-container {
   width: fit-content;
   height: fit-content;
-  min-height: 567px;
+  min-height: 600px;
   background-color: aliceblue;
   border: solid 3px black;
   border-radius: 1rem;

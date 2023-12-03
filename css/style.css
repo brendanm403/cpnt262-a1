@@ -23,10 +23,11 @@ h4 {
   width: 500px;
   height: 600px;
   background-color: aliceblue;
-  margin-left: 2rem;
-  margin-top: 2rem; 
+  /* margin-left: 2rem; */
+  margin-top: 2rem;  
   border: 3px solid black;
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 .currency-grid {
@@ -40,6 +41,20 @@ h4 {
   margin-top: 4rem;
 }
 
+.container-heading {
+  margin-top: 0;
+}
+
+.prof-oak-img {
+  height: 200px;
+  display: block;
+  margin: 3rem auto 3rem auto;
+}
+
+.shop-info {
+  max-width: 56ch;
+  text-align: center;
+}
 
 
 
