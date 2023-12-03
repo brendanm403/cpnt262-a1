@@ -176,7 +176,7 @@ const fetchPokemon = () => {
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, randomRange(20000, 21000));
+    setInterval(mainGame, randomRange(55000, 68000));
     // mainGame();
     console.log(pokemonArr);
     
@@ -486,9 +486,12 @@ const boughtPokemon = function(str) {
 }
 
 const mainGame = function() {
-  selectPokemon(pokemonArr);
-  displayOnScreen(pokemonArr);
-  setTimeout(removePokemon, 15100);
+  let num = Math.ceil(Math.random() * 100);
+  if (num <= 50) {
+    selectPokemon(pokemonArr);
+    displayOnScreen(pokemonArr);
+    setTimeout(removePokemon, 15100);
+  }
 }
 
 const timeStart = function() {
