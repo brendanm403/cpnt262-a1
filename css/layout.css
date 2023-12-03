@@ -43,6 +43,14 @@ a {
   color: #fff;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ffcc00;
+}
+
 header h2 {
   margin: 0;
   padding: 1rem;
