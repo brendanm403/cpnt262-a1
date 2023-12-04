@@ -22,6 +22,11 @@ const fetchPokemon = () => {
 
 fetchPokemon();
 
+const capitalizeName = function(obj) {
+  let result = obj.name.charAt(0).toUpperCase() + obj.name.slice(1);
+  return result;  
+}
+
 const createDiv = function(obj) {
   let div = document.createElement("div");
   div.classList.add("grid-item");
@@ -41,6 +46,7 @@ const createNameText = function(obj) {
   let pTag = document.createElement("p");
   let pokemonName = document.createTextNode(obj.name);
   pTag.appendChild(pokemonName);
+  pTag.innerHTML = capitalizeName(obj);
   document.getElementById(obj.name).appendChild(pTag);
 }
 

@@ -16,6 +16,10 @@ closeModal2.addEventListener("click", () => {
 closeModal3.addEventListener("click", () => {
   modal3.close();
 })
+
+const randomRange = function(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+};
 TODO: // reconfigure the if statement section that checks rarity and time, can put time value required in extra data
 
 extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
@@ -185,11 +189,12 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
+    // capitalizeName(pokemonArr[0]);
     // selectPokemon(pokemonArr);
     // renderImg(pokemonArr);
     // displayOnScreen(pokemonArr);
-    setInterval(mainGame, randomRange(55000, 68000));
-    // mainGame();
+    // setInterval(mainGame, randomRange(55000, 68000));
+    mainGame();
     console.log(pokemonArr);
     
 
@@ -200,9 +205,10 @@ const fetchPokemon = () => {
 
 fetchPokemon();
   
-function randomRange(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-};
+const capitalizeName = function(obj) {
+  let result = obj.name.charAt(0).toUpperCase() + obj.name.slice(1);
+  return result;  
+}
 
 const displayCoins = function(coins) {
   document.getElementById("player-coins").innerHTML = numberFormatter.format(coins);
@@ -242,7 +248,7 @@ const createNameText = function(obj) {
   let pElement = document.createElement("p");
   let pokemonName = document.createTextNode(obj.name);
   pElement.appendChild(pokemonName);
-  // pElement.className = "item-name";
+  pElement.innerHTML = capitalizeName(obj);
   document.getElementById(obj.id).appendChild(pElement);   
 };
 
@@ -538,12 +544,12 @@ const renderModalContent = function(obj, userTime) {
   if (userTime <= minTime) {
     result.innerHTML = "Success";
     result.style.color = "green";
-    resultMessage.innerHTML = `${obj.name} has been added to your collection`;
+    resultMessage.innerHTML = `${capitalizeName(obj)} has been added to your collection`;
   } 
   if (userTime > minTime){
     result.innerHTML = "Oops!";
     result.style.color = "red";
-    resultMessage.innerHTML = `${obj.name} is sold out! You were too slow!`;
+    resultMessage.innerHTML = `${capitalizeName(obj)} is sold out! You were too slow!`;
   }
   let img = document.getElementById("modal-img");
   let rarity = document.getElementById("poke-rarity");
@@ -579,7 +585,7 @@ const renderModal3Content = function(obj, userTime) {
   let img = document.getElementById("modal-img3");
   let rarity = document.getElementById("poke-rarity3");
   let time = document.getElementById("transaction-time3");
-  result.innerHTML = "Hey! No Deal!"
+  result.innerHTML = "No deal!"
   result.style.color = "orange";
   resultMessage.innerHTML = "This offer is too low! Try a higher offer!";
   img.src = obj.src;
