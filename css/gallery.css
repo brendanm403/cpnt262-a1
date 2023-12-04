@@ -81,10 +81,11 @@ h1 {
 
 @media screen and (width < 35rem) {
   .all-pokemon-grid {
-    grid-template-columns: repeat(3, 80px);  
+    grid-template-columns: repeat(1, 130px);
+    justify-content: center; 
   }
 
-  p {
+  /* p {
     font-size: 16px;
   }
 
@@ -94,6 +95,6 @@ h1 {
 
   .pokedex-image {
     width: 75px;
-  }
+  } */
 }
 
