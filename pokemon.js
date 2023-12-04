@@ -189,17 +189,8 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
-    // capitalizeName(pokemonArr[0]);
-    // selectPokemon(pokemonArr);
-    // renderImg(pokemonArr);
-    // displayOnScreen(pokemonArr);
     // setInterval(mainGame, randomRange(55000, 68000));
     mainGame();
-    console.log(pokemonArr);
-    
-
-
-    
   });  
 }
 
