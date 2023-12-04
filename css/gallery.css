@@ -82,7 +82,15 @@ h1 {
 @media screen and (width < 35rem) {
   .all-pokemon-grid {
     grid-template-columns: repeat(1, 130px);
-    justify-content: center; 
+    justify-content: center;
+  }
+
+  .wrapper {
+    max-width: fit-content;
+  }
+
+  h1 {
+    font-size: 24px;
   }
 
   /* p {
