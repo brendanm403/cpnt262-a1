@@ -10,6 +10,30 @@
   mix-blend-mode: luminosity;
 }
 
+.grid-item {
+  /* the tooltip hover is absolute, setting the div to relative will make the absolute pop up position
+  itself in relation to the div instead of the body */
+  position: relative;
+}
+
+.tool-tip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 4px;
+  border-radius: 6px;
+  font-size: 12px;
+  max-width: 10ch;
+  position: absolute;
+  z-index: 1;
+  left: -50%;
+}
+
+.grid-item:hover .tool-tip-text {
+  visibility: visible;
+}
+
 .wrapper {
   padding: 1rem;
   background-color: white;
@@ -33,11 +57,8 @@ h1 {
   margin-bottom: 5rem;
 }
 
-
-
 .pokedex-image {
   display: block;
-  position: relative;
   margin: 0 auto 1rem auto;
 }
 

@@ -188,9 +188,10 @@ const createDiv = function(obj) {
 }
 
 const createToolTip = function(obj) {
-  let span = document.createElement("span");
-  span.innerHTML = `Rarity: ${extraData.get(obj.name).rarity}`;
-  document.getElementById(obj.name).appendChild(span);
+  let div = document.createElement("div");
+  div.innerHTML = `<span>${capitalizeName(obj)}</span> <span>Rarity: ${extraData.get(obj.name).rarity}</span> <span>Time: ${extraData.get(obj.name).minTime}s</span>`;
+  div.classList.add("tool-tip-text");
+  document.getElementById(obj.name).appendChild(div);
 }
 
 const createImg = function(obj) {
