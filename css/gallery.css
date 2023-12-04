@@ -37,6 +37,7 @@ h1 {
 
 .pokedex-image {
   display: block;
+  position: relative;
   margin: 0 auto 1rem auto;
 }
 
