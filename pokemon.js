@@ -4,6 +4,18 @@ const extraData = new Map();
 const modal1 = document.getElementById("modal1");
 const modal2 = document.getElementById("modal2");
 const modal3 = document.getElementById("modal3");
+const closeModal1 = document.getElementById("close-modal");
+const closeModal2 = document.getElementById("close-modal2");
+const closeModal3 = document.getElementById("close-modal3");
+closeModal1.addEventListener("click", () => {
+  modal1.close();
+})
+closeModal2.addEventListener("click", () => {
+  modal2.close();
+})
+closeModal3.addEventListener("click", () => {
+  modal3.close();
+})
 TODO: // reconfigure the if statement section that checks rarity and time, can put time value required in extra data
 
 extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
@@ -518,19 +530,6 @@ const updateChanges = function(coins, buttonName, divToRemove, inputVal) {
   boughtPokemon(buttonName);
   divToRemove.remove();
 }
-
-const closeModal1 = document.getElementById("close-modal");
-const closeModal2 = document.getElementById("close-modal2");
-const closeModal3 = document.getElementById("close-modal3");
-closeModal1.addEventListener("click", () => {
-  modal1.close();
-})
-closeModal2.addEventListener("click", () => {
-  modal2.close();
-})
-closeModal3.addEventListener("click", () => {
-  modal3.close();
-})
 
 const renderModalContent = function(obj, userTime) {
   let minTime = extraData.get(obj.name).minTime;
