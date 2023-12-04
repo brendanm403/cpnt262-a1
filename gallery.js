@@ -237,10 +237,4 @@ const displayBoughtPokemon = function() {
       pokemon.classList.remove("missing-pokemon");
     }
   })
-  // galleryPokemon.forEach(pokemon => {
-  //   pokemon.src = localStorage.getItem("pidgeotto");
-  //   pokemon.classList.remove("missing-pokemon");  
-  // });
-  // galleryPokemon.src = localStorage.getItem("pidgeotto");
-  // galleryPokemon.classList.remove("missing-pokemon");
 }
