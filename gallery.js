@@ -170,6 +170,7 @@ const fetchPokemon = () => {
     // renderImg(pokemonArr);
     displayPokedex(pokemonArr);
     displayBoughtPokemon();
+    changeToolTipColour();
   });  
 }
 
@@ -189,10 +190,19 @@ const createDiv = function(obj) {
 
 const createToolTip = function(obj) {
   let div = document.createElement("div");
-  div.innerHTML = `<span>${capitalizeName(obj)}</span> <p class="tool-tip-rarity">Rarity: ${extraData.get(obj.name).rarity}</p> <p class="tool-tip-time">Time: ${extraData.get(obj.name).minTime}s</p>`;
+  div.innerHTML = `<span name=${obj.name + obj.id}>${capitalizeName(obj)}</span> <p class="tool-tip-rarity">Rarity: ${extraData.get(obj.name).rarity}</p> <p class="tool-tip-time">Time: ${extraData.get(obj.name).minTime}s</p>`;
   div.classList.add("tool-tip-text");
   document.getElementById(obj.name).appendChild(div);
-  
+}
+
+const changeToolTipColour = function() {
+  let spansArr = document.querySelectorAll("span");
+  console.log(spansArr[0].attributes[0].value);
+  spansArr.forEach(span => {
+    if (localStorage.getItem(span.attributes[0].value)) {
+      span.classList.add("purple-tool-tip-name");
+    }
+  })
 }
 
 const createImg = function(obj) {
@@ -234,6 +244,7 @@ const displayBoughtPokemon = function() {
   console.log(galleryPokemon);
   galleryPokemon.forEach(pokemon => {
     let pokemonName = pokemon.name;
+    console.log(pokemonName);
     if (localStorage.getItem(pokemon.name)) {
       pokemon.src = localStorage.getItem(pokemon.name);
       pokemon.classList.remove("missing-pokemon");

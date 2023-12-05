@@ -32,6 +32,10 @@
   transition: 0.3s;
 }
 
+.purple-tool-tip-name {
+  color: hsl(300, 100%, 45%);
+}
+
 .grid-item:hover .tool-tip-text {
   opacity: 1;
 }
