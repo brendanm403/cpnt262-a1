@@ -1,9 +1,9 @@
 let pokemonArr = [];
 const extraData = new Map();
 
-extraData.set("bulbasaur", {rarity: 4, minTime: 2.9})
-.set("ivysaur", {rarity: 3, minTime: 2.8 })
-.set("venusaur", {rarity: 1, minTime: 2.5 })
+extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, color: "green"})
+.set("ivysaur", {rarity: 3, minTime: 2.8, color: "green"})
+.set("venusaur", {rarity: 1, minTime: 2.5, color: "green"})
 .set("charmander", {rarity: 4, minTime: 2.9})
 .set("charmeleon", {rarity: 3, minTime: 2.8})
 .set("charizard", {rarity: 1, minTime: 2.5})
@@ -189,9 +189,10 @@ const createDiv = function(obj) {
 
 const createToolTip = function(obj) {
   let div = document.createElement("div");
-  div.innerHTML = `<span>${capitalizeName(obj)}</span> <span>Rarity: ${extraData.get(obj.name).rarity}</span> <span>Time: ${extraData.get(obj.name).minTime}s</span>`;
+  div.innerHTML = `<span>${capitalizeName(obj)}</span> <p class="tool-tip-rarity">Rarity: ${extraData.get(obj.name).rarity}</p> <p class="tool-tip-time">Time: ${extraData.get(obj.name).minTime}s</p>`;
   div.classList.add("tool-tip-text");
   document.getElementById(obj.name).appendChild(div);
+  
 }
 
 const createImg = function(obj) {
