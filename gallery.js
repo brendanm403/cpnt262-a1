@@ -1,9 +1,9 @@
 let pokemonArr = [];
 const extraData = new Map();
 
-extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, color: "green"})
-.set("ivysaur", {rarity: 3, minTime: 2.8, color: "green"})
-.set("venusaur", {rarity: 1, minTime: 2.5, color: "green"})
+extraData.set("bulbasaur", {rarity: 4, minTime: 2.9})
+.set("ivysaur", {rarity: 3, minTime: 2.8})
+.set("venusaur", {rarity: 1, minTime: 2.5})
 .set("charmander", {rarity: 4, minTime: 2.9})
 .set("charmeleon", {rarity: 3, minTime: 2.8})
 .set("charizard", {rarity: 1, minTime: 2.5})

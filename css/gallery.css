@@ -17,7 +17,6 @@
 }
 
 .tool-tip-text {
-  visibility: hidden;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -29,10 +28,12 @@
   z-index: 1;
   left: -32%;
   top: -25%;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .grid-item:hover .tool-tip-text {
-  visibility: visible;
+  opacity: 1;
 }
 
 .tool-tip-time {
