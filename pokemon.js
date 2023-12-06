@@ -189,8 +189,8 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
-    setInterval(mainGame, randomRange(55000, 68000));
-    // mainGame();
+    // setInterval(mainGame, randomRange(55000, 68000));
+    mainGame();
   });  
 }
 
@@ -308,6 +308,59 @@ const createButton = function(obj) {
           // alert(`Too slow! ${obj.name} is sold out!`);
           renderModalContent(obj, timeToPurchase);
           modal1.showModal(); 
+        } else if (localStorage.getItem(obj.name + obj.id)) {
+          let rarity = extraData.get(obj.name).rarity;
+          switch (rarity) {
+            case 80:
+            case 75:
+              alert("80 or 75");
+              renderModalContent
+              break;
+            case 40:
+            case 35:
+              alert("40 or 35");
+              break;
+            case 30:
+            case 25:
+              alert("25 or 30");
+              break;
+            case 20:
+              alert("20");
+              break;
+            case 18:
+            case 17:
+            case 15:
+              alert("15 17 18");
+              break;
+            case 10:
+            case 9:
+              alert("10 9");
+              break;
+            case 8:
+            case 7:
+              alert("7 8");
+              break;
+            case 6:
+              alert("6");
+              break;
+            case 5:
+              alert("5");
+              break;
+            case 4:
+              alert("4");
+              break;
+            case 3:
+              alert("3");
+              break;
+            case 2:
+              alert("2");
+              break;
+            case 1:
+              alert("1");
+              break;            
+            default:
+              alert("error");    
+          } 
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
           updateChanges(playerCoins, buttonClicked, div, inputValue);
           // alert(`Congratulations! ${obj.name} has been added to your collection!`);
