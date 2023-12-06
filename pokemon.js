@@ -4,9 +4,11 @@ const extraData = new Map();
 const modal1 = document.getElementById("modal1");
 const modal2 = document.getElementById("modal2");
 const modal3 = document.getElementById("modal3");
+const modal4 = document.getElementById("modal4");
 const closeModal1 = document.getElementById("close-modal");
 const closeModal2 = document.getElementById("close-modal2");
 const closeModal3 = document.getElementById("close-modal3");
+const closeModal4 = document.getElementById("close-modal4");
 closeModal1.addEventListener("click", () => {
   modal1.close();
 })
@@ -15,6 +17,9 @@ closeModal2.addEventListener("click", () => {
 })
 closeModal3.addEventListener("click", () => {
   modal3.close();
+})
+closeModal4.addEventListener("click", () => {
+  modal4.close();
 })
 
 const randomRange = function(min, max) {
@@ -310,53 +315,92 @@ const createButton = function(obj) {
           modal1.showModal(); 
         } else if (localStorage.getItem(obj.name + obj.id)) {
           let rarity = extraData.get(obj.name).rarity;
+          let multiplier;
           switch (rarity) {
             case 80:
             case 75:
-              alert("80 or 75");
-              renderModalContent
+              multiplier = 0.1;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 40:
             case 35:
-              alert("40 or 35");
+              multiplier = 0.3;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 30:
             case 25:
-              alert("25 or 30");
+              multiplier = 0.5;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 20:
-              alert("20");
+              multiplier = 0.7;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 18:
             case 17:
             case 15:
-              alert("15 17 18");
+              multiplier = 1;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 10:
             case 9:
-              alert("10 9");
+              multiplier = 1.1;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 8:
             case 7:
-              alert("7 8");
+              multiplier = 1.3;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 6:
-              alert("6");
+              multiplier = 1.4;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 5:
-              alert("5");
+              multiplier = 1.6;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 4:
-              alert("4");
+              multiplier = 1.8;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 3:
-              alert("3");
+              multiplier = 2;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 2:
-              alert("2");
+              multiplier = 2.5;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;
             case 1:
-              alert("1");
+              multiplier = 3;
+              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
+              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
+              modal4.showModal();
               break;            
             default:
               alert("error");    
@@ -581,6 +625,14 @@ const updateChanges = function(coins, buttonName, divToRemove, inputVal) {
   divToRemove.remove();
 }
 
+const updateDuplicatePurchase = function(coins, inputVal, muliplier, divToRemove) {
+  coins = coins - inputVal;
+  coins = coins + (Math.ceil(inputVal * muliplier));
+  localStorage.setItem("coins", coins);
+  displayCoins(coins);
+  divToRemove.remove();
+}
+
 const renderModalContent = function(obj, userTime) {
   let minTime = extraData.get(obj.name).minTime;
   let result = document.getElementById("result");
@@ -632,6 +684,22 @@ const renderModal3Content = function(obj, userTime) {
   result.innerHTML = "No deal!"
   result.style.color = "orange";
   resultMessage.innerHTML = "This offer is too low! Try a higher offer!";
+  img.src = obj.src;
+  rarity.innerHTML = extraData.get(obj.name).rarity;
+  time.innerHTML = userTime + "s";
+}
+
+const renderModal4Content = function(obj, userTime, inputVal, multiplier) {
+  let result = document.getElementById("result4");
+  let resultMessage = document.getElementById("result-message4");
+  let secondMessage = document.getElementById("coin-return");
+  let img = document.getElementById("modal-img4");
+  let rarity = document.getElementById("poke-rarity4");
+  let time = document.getElementById("transaction-time4");
+  result.innerHTML = "Duplicate Purchase";
+  result.style.color = "hsl(300, 100%, 45%)";
+  resultMessage.innerHTML = "You already have this pokemon!";
+  secondMessage.innerHTML = `${Math.ceil(multiplier * inputVal)} coins have been added to your balance!`;
   img.src = obj.src;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
