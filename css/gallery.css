@@ -90,23 +90,6 @@ h1 {
   .all-pokemon-grid {
     grid-template-columns: repeat(4, 130px);
   }
-
-  header {
-    display: unset;
-    text-align: center;
-  }
-
-  nav {
-    justify-content: center;
-  }
-  
-  ul {
-    display: unset;
-  }
-
-  li {
-    margin: 0.7rem 0;
-  }
 }
 
 @media screen and (width < 46rem) {
