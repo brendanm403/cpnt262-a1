@@ -194,8 +194,8 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
-    // setInterval(mainGame, randomRange(55000, 68000));
-    mainGame();
+    setInterval(mainGame, randomRange(30000, 45000));
+    // mainGame();
   });  
 }
 
@@ -699,7 +699,7 @@ const renderModal4Content = function(obj, userTime, inputVal, multiplier) {
   result.innerHTML = "Duplicate Purchase";
   result.style.color = "hsl(300, 100%, 45%)";
   resultMessage.innerHTML = "You already have this pokemon!";
-  secondMessage.innerHTML = `${Math.ceil(multiplier * inputVal)} coins have been added to your balance!`;
+  secondMessage.innerHTML = `${numberFormatter.format(Math.ceil(multiplier * inputVal))} coins have been added to your balance!`;
   img.src = obj.src;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
