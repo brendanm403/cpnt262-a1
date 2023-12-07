@@ -194,8 +194,8 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
-    // setInterval(mainGame, randomRange(30000, 45000));
-    mainGame();
+    setInterval(mainGame, randomRange(30000, 45000));
+    // mainGame();
   });  
 }
 
