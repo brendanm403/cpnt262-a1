@@ -194,8 +194,8 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
-    setInterval(mainGame, randomRange(30000, 45000));
-    // mainGame();
+    // setInterval(mainGame, randomRange(30000, 45000));
+    mainGame();
   });  
 }
 
@@ -689,7 +689,8 @@ const renderModal3Content = function(obj, userTime) {
   time.innerHTML = userTime + "s";
 }
 
-const renderModal4Content = function(obj, userTime, inputVal, multiplier) {
+const renderModal4Content = function(obj, userTime, multiplier, inputVal) {
+  console.log('starton');
   let result = document.getElementById("result4");
   let resultMessage = document.getElementById("result-message4");
   let secondMessage = document.getElementById("coin-return");
@@ -699,7 +700,17 @@ const renderModal4Content = function(obj, userTime, inputVal, multiplier) {
   result.innerHTML = "Duplicate Purchase";
   result.style.color = "hsl(300, 100%, 45%)";
   resultMessage.innerHTML = "You already have this pokemon!";
-  secondMessage.innerHTML = `${numberFormatter.format(Math.ceil(multiplier * inputVal))} coins have been added to your balance!`;
+  console.log('xxx', multiplier);
+  secondMessage.innerHTML = `<span id="profit">${numberFormatter.format(Math.ceil(multiplier * inputVal))}</span> coins have been added to your balance!`;
+  let profit = document.getElementById("profit");
+  console.log(multiplier);
+  if (multiplier < 1) {
+    profit.style.color = "red";
+  } else if (multiplier === 1) {
+    profit.style.color = "orange";
+  } else {
+    profit.style.color = "green";
+  }
   img.src = obj.src;
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
