@@ -74,3 +74,22 @@ footer {
   background-color: #000;
   color: #fff;
 }
+
+@media screen and (width < 57rem) {
+  header {
+    display: unset;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+  
+  ul {
+    display: unset;
+  }
+
+  li {
+    margin: 0.7rem 0;
+  }
+}
