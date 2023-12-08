@@ -226,7 +226,7 @@ const createNameText = function(obj) {
 
 const createNumberText = function(obj) {
   let pTag = document.createElement("p");
-  let pokemonNumber = document.createTextNode(obj.id);
+  let pokemonNumber = document.createTextNode("#" + obj.id);
   pTag.classList.add("dex-number");
   pTag.appendChild(pokemonNumber);
   document.getElementById(obj.name).appendChild(pTag);
