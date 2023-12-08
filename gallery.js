@@ -171,6 +171,7 @@ const fetchPokemon = () => {
     displayPokedex(pokemonArr);
     displayBoughtPokemon();
     changeToolTipColour();
+    // makeNamePokemonColors();
   });  
 }
 
@@ -217,6 +218,8 @@ const createNameText = function(obj) {
   let pTag = document.createElement("p");
   let pokemonName = document.createTextNode(obj.name);
   pTag.appendChild(pokemonName);
+  pTag.classList.add("name-text");
+  pTag.setAttribute("name", obj.name + obj.id);
   pTag.innerHTML = capitalizeName(obj);
   document.getElementById(obj.name).appendChild(pTag);
 }
@@ -251,3 +254,14 @@ const displayBoughtPokemon = function() {
     }
   })
 }
+
+// const makeNamePokemonColors = function() {
+//   let namesArr = document.querySelectorAll(".name-text");
+//   console.log(namesArr);
+//   console.log(namesArr[0].attributes[1]);
+//   namesArr.forEach(pokeName => {
+//     if (localStorage.getItem(pokeName.attributes[1].value)) {
+//       pokeName.classList.add("purchased-pokemon");
+//     }
+//   })
+// }
