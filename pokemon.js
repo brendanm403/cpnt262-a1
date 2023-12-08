@@ -640,7 +640,7 @@ const renderModalContent = function(obj, userTime) {
   if (userTime <= minTime) {
     result.innerHTML = "Success";
     result.style.color = "green";
-    resultMessage.innerHTML = `${capitalizeName(obj)} has been added to your collection`;
+    resultMessage.innerHTML = `${capitalizeName(obj)} has been added to your collection!`;
   } 
   if (userTime > minTime){
     result.innerHTML = "Oops!";
@@ -701,7 +701,7 @@ const renderModal4Content = function(obj, userTime, multiplier, inputVal) {
   result.style.color = "hsl(300, 100%, 45%)";
   resultMessage.innerHTML = "You already have this pokemon!";
   console.log('xxx', multiplier);
-  secondMessage.innerHTML = `<span id="profit">${numberFormatter.format(Math.ceil(multiplier * inputVal))}</span> coins have been added to your balance!`;
+  secondMessage.innerHTML = `You resell your duplicate for <span id="profit">${numberFormatter.format(Math.ceil(multiplier * inputVal))}</span> coins.`;
   let profit = document.getElementById("profit");
   console.log(multiplier);
   if (multiplier < 1) {
