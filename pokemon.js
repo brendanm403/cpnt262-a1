@@ -27,157 +27,157 @@ const randomRange = function(min, max) {
 };
 TODO: // reconfigure the if statement section that checks rarity and time, can put time value required in extra data
 
-extraData.set("bulbasaur", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
-.set("ivysaur", {rarity: 3, minTime: 2.8, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
-.set("venusaur", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("charmander", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
-.set("charmeleon", {rarity: 3, minTime: 2.8, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
-.set("charizard", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("squirtle", {rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
-.set("wartortle", {rarity: 3, minTime: 2.8, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
-.set("blastoise", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("caterpie", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
-.set("metapod", {rarity: 40, minTime: 9, minPrice: 4000, maxPrice: 5500, price: randomRange(4000, 5500)})
-.set("butterfree", {rarity: 30, minTime: 6, minPrice: 6000, maxPrice: 8500, price: randomRange(6000, 8500)})
-.set("weedle", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
-.set("kakuna", {rarity: 40, minTime: 9, minPrice: 4000, maxPrice: 5500, price: randomRange(4000, 5500)})
-.set("beedrill", {rarity: 30, minTime: 6, minPrice: 6000, maxPrice: 8500, price: randomRange(6000, 8500)})
-.set("pidgey", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
-.set("pidgeotto", {rarity: 30, minTime: 6, minPrice: 5000, maxPrice: 7000, price: randomRange(5000, 7000)})
-.set("pidgeot", {rarity: 10, minTime: 3.5, minPrice: 8000, maxPrice: 11000, price: randomRange(8000, 11000)})
-.set("rattata", {rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
-.set("raticate", {rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 6500, price: randomRange(4000, 6500)})
-.set("spearow", {rarity: 40, minTime: 9, minPrice: 3300, maxPrice: 4800, price: randomRange(3300, 4800)})
-.set("fearow", {rarity: 20, minTime: 4, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
-.set("ekans", {rarity: 40, minTime: 9, minPrice: 3300, maxPrice: 4800, price: randomRange(3300, 4800)})
-.set("arbok", {rarity: 20, minTime: 4, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
-.set("pikachu", {rarity: 15, minTime: 3.5, minPrice: 9000, maxPrice: 12500, price: randomRange(9000, 12500)})
-.set("raichu", {rarity: 5, minTime: 3.0, minPrice: 13000, maxPrice: 15000, price: randomRange(13000, 15000)})
-.set("sandshrew", {rarity: 40, minTime: 9, minPrice: 3400, maxPrice: 4700, price: randomRange(3400, 4700)})
-.set("sandslash", {rarity: 10, minTime: 3.5, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
-.set("nidoran-f", {rarity: 35, minTime: 6, minPrice: 3000, maxPrice: 4400, price: randomRange(3000, 4400)})
-.set("nidorina", {rarity: 25, minTime: 4, minPrice: 5000, maxPrice: 7700, price: randomRange(5000, 7700)})
-.set("nidoqueen", {rarity: 5, minTime: 3.0, minPrice: 9500, maxPrice: 13600, price: randomRange(9500, 13000)})
-.set("nidoran-m", {rarity: 35, minTime: 6, minPrice: 3000, maxPrice: 4400, price: randomRange(3000, 4400)})
-.set("nidorino", {rarity: 25, minTime: 4, minPrice: 5000, maxPrice: 7700, price: randomRange(5000, 7700)})
-.set("nidoking", {rarity: 5, minTime: 3.0, minPrice: 9500, maxPrice: 13600, price: randomRange(9500, 13600)})
-.set("clefairy", {rarity: 35, minTime: 6, minPrice: 3000, maxPrice: 5300, price: randomRange(3000, 5300)})
-.set("clefable", {rarity: 25, minTime: 4, minPrice: 8400, maxPrice: 11000, price: randomRange(8400, 11000)})
-.set("vulpix", {rarity: 15, minTime: 3.5, minPrice: 8000, maxPrice: 11900, price: randomRange(8000, 11900)})
-.set("ninetales", {rarity: 3, minTime: 2.8, minPrice: 25000, maxPrice: 28500, price: randomRange(25000, 28500)})
-.set("jigglypuff", {rarity: 40, minTime: 9, minPrice: 3000, maxPrice: 5300, price: randomRange(3000, 5300)})
-.set("wigglytuff", {rarity: 25, minTime: 4, minPrice: 8400, maxPrice: 11000, price: randomRange(8400, 11000)})
-.set("zubat", {rarity: 80, minTime: 15, minPrice: 1000, maxPrice: 1600, price: randomRange(1000, 1600)})
-.set("golbat", {rarity: 40, minTime: 9, minPrice: 5000, maxPrice: 6000, price: randomRange(5000, 6000)})
-.set("oddish", {rarity: 40, minTime: 9, minPrice: 3800, maxPrice: 4600, price: randomRange(3800, 4600)})
-.set("gloom", {rarity: 30, minTime: 6, minPrice: 5800, maxPrice: 7300, price: randomRange(5800, 7300)})
-.set("vileplume", {rarity: 5, minTime: 3.0, minPrice: 9800, maxPrice: 12400, price: randomRange(9800, 12400)})
-.set("paras", {rarity: 30, minTime: 6, minPrice: 2400, maxPrice: 3100, price: randomRange(2400, 3100)})
-.set("parasect", {rarity: 20, minTime: 4, minPrice: 5800, maxPrice: 8000, price: randomRange(5800, 8000)})
-.set("venonat", {rarity: 30, minTime: 6, minPrice: 2800, maxPrice: 3400, price: randomRange(2800, 3400)})
-.set("venomoth", {rarity: 20, minTime: 4, minPrice: 7400, maxPrice: 9600, price: randomRange(7400, 9600)})
-.set("diglett", {rarity: 40, minTime: 9, minPrice: 2800, maxPrice: 3500, price: randomRange(2800, 3500)})
-.set("dugtrio", {rarity: 25, minTime: 4, minPrice: 7000, maxPrice: 9000, price: randomRange(7000, 9000)})
-.set("meowth", {rarity: 40, minTime: 9, minPrice: 3800, maxPrice: 4800, price: randomRange(3800, 4800)})
-.set("persian", {rarity: 30, minTime: 6, minPrice: 6800, maxPrice: 8500, price: randomRange(6800, 8500)})
-.set("psyduck", {rarity: 30, minTime: 6, minPrice: 4800, maxPrice: 5700, price: randomRange(4800, 5700)})
-.set("golduck", {rarity: 15, minTime: 3.5, minPrice: 7000, maxPrice: 10400, price: randomRange(7000, 10400)})
-.set("mankey", {rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 5900, price: randomRange(4000, 5900)})
-.set("primeape", {rarity: 15, minTime: 3.5, minPrice: 8500, maxPrice: 12500, price: randomRange(8500, 12500)})
-.set("growlithe", {rarity: 15, minTime: 3.5, minPrice: 8000, maxPrice: 11900, price: randomRange(8000, 11900)})
-.set("arcanine", {rarity: 2, minTime: 2.7, minPrice: 30000, maxPrice: 40000, price: randomRange(30000, 40000)})
-.set("poliwag", {rarity: 35, minTime: 6, minPrice: 3500, maxPrice: 4400, price: randomRange(3500, 4400)})
-.set("poliwhirl", {rarity: 25, minTime: 4, minPrice: 5000, maxPrice: 6900, price: randomRange(5000, 6900)})
-.set("poliwrath", {rarity: 4, minTime: 2.9, minPrice: 9900, maxPrice: 13300, price: randomRange(9900, 13300)})
-.set("abra", {rarity: 30, minTime: 6, minPrice: 4800, maxPrice: 5800, price: randomRange(4800, 5800)})
-.set("kadabra", {rarity: 20, minTime: 4, minPrice: 6000, maxPrice: 8000, price: randomRange(6000, 8000)})
-.set("alakazam", {rarity: 4, minTime: 2.9, minPrice: 14000, maxPrice: 17700, price: randomRange(14000, 17700)})
-.set("machop", {rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 4600, price: randomRange(4000, 4600)})
-.set("machoke", {rarity: 20, minTime: 4, minPrice: 6500, maxPrice: 9000, price: randomRange(6500, 9000)})
-.set("machamp", {rarity: 4, minTime: 2.9, minPrice: 11800, maxPrice: 16600, price: randomRange(11800, 16600)})
-.set("bellsprout", {rarity: 35, minTime: 6, minPrice: 2800, maxPrice: 3500, price: randomRange(2800, 3500)})
-.set("weepinbell", {rarity: 25, minTime: 4, minPrice: 4900, maxPrice: 6000, price: randomRange(4900, 6000)})
-.set("victreebel", {rarity: 5, minTime: 3.0, minPrice: 9400, maxPrice: 13400, price: randomRange(9400, 13400)})
-.set("tentacool", {rarity: 35, minTime: 6, minPrice: 3300, maxPrice: 5000, price: randomRange(3300, 5000)})
-.set("tentacruel", {rarity: 7, minTime: 3.2, minPrice: 8800, maxPrice: 12400, price: randomRange(8800, 12400)})
-.set("geodude", {rarity: 40, minTime: 9, minPrice: 3100, maxPrice: 4100, price: randomRange(3100, 4100)})
-.set("graveler", {rarity: 25, minTime: 4, minPrice: 5400, maxPrice: 7000, price: randomRange(5400, 7000)})
-.set("golem", {rarity: 6, minTime: 3.1, minPrice: 8900, maxPrice: 13000, price: randomRange(8900, 13000)})
-.set("ponyta", {rarity: 15, minTime: 3.5, minPrice: 7800, maxPrice: 10800, price: randomRange(7800, 10800)})
-.set("rapidash", {rarity: 5, minTime: 3.0, minPrice: 11800, maxPrice: 14600, price: randomRange(11800, 14600)})
-.set("slowpoke", {rarity: 30, minTime: 6, minPrice: 4800, maxPrice: 5700, price: randomRange(4800, 5700)})
-.set("slowbro", {rarity: 8, minTime: 3.3, minPrice: 10000, maxPrice: 12900, price: randomRange(10000, 12900)})
-.set("magnemite", {rarity: 30, minTime: 6, minPrice: 3800, maxPrice: 4300, price: randomRange(3800, 4300)})
-.set("magneton", {rarity: 8, minTime: 3.3, minPrice: 8500, maxPrice: 10100, price: randomRange(8500, 10100)})
-.set("farfetchd", {rarity: 15, minTime: 3.5, minPrice: 6800, maxPrice: 8200, price: randomRange(6800, 8200)})
-.set("doduo", {rarity: 35, minTime: 6, minPrice: 4500, maxPrice: 5600, price: randomRange(4500, 5600)})
-.set("dodrio", {rarity: 10, minTime: 3.5, minPrice: 8000, maxPrice: 11000, price: randomRange(9000, 11000)})
-.set("seel", {rarity: 25, minTime: 4, minPrice: 4200, maxPrice: 6000, price: randomRange(4200, 6000)})
-.set("dewgong", {rarity: 8, minTime: 3.3, minPrice: 8500, maxPrice: 12400, price: randomRange(8500, 12400)})
-.set("grimer", {rarity: 35, minTime: 6, minPrice: 4000, maxPrice: 5000, price: randomRange(4000, 5000)})
-.set("muk", {rarity: 8, minTime: 3.3, minPrice: 8800, maxPrice: 11000, price: randomRange(8800, 11000)})
-.set("shellder", {rarity: 25, minTime: 4, minPrice: 3800, maxPrice: 5000, price: randomRange(3800, 5000)})
-.set("cloyster", {rarity: 9, minTime: 3.3, minPrice: 9000, maxPrice: 12000, price: randomRange(9000, 12000)})
-.set("gastly", {rarity: 20, minTime: 4, minPrice: 4700, maxPrice: 6000, price: randomRange(4700, 6000)})
-.set("haunter", {rarity: 10, minTime: 3.5, minPrice: 8500, maxPrice: 10000, price: randomRange(8500, 10000)})
-.set("gengar", {rarity: 2, minTime: 2.7, minPrice: 20000, maxPrice: 25000, price: randomRange(20000, 25000)})
-.set("onix", {rarity: 10, minTime: 3.5, minPrice: 7000, maxPrice: 8000, price: randomRange(7000, 8000)})
-.set("drowzee", {rarity: 30, minTime: 6, minPrice: 3700, maxPrice: 4300, price: randomRange(3700, 4300)})
-.set("hypno", {rarity: 10, minTime: 3.5, minPrice: 7800, maxPrice: 9500, price: randomRange(7800, 9500)})
-.set("krabby", {rarity: 25, minTime: 4, minPrice: 3500, maxPrice: 4000, price: randomRange(3500, 4000)})
-.set("kingler", {rarity: 9, minTime: 3.3, minPrice: 7500, maxPrice: 9000, price: randomRange(7500, 9000)})
-.set("voltorb", {rarity: 20, minTime: 4, minPrice: 4000, maxPrice: 4800, price: randomRange(4000, 4800)})
-.set("electrode", {rarity: 9, minTime: 3.3, minPrice: 8000, maxPrice: 11000, price: randomRange(8000, 11000)})
-.set("exeggcute", {rarity: 18, minTime: 3.5, minPrice: 5800, maxPrice: 6200, price: randomRange(5800, 6200)})
-.set("exeggutor", {rarity: 3, minTime: 2.8, minPrice: 12000, maxPrice: 15400, price: randomRange(12000, 15400)})
-.set("cubone", {rarity: 35, minTime: 6, minPrice: 3800, maxPrice: 4700, price: randomRange(3800, 4700)})
-.set("marowak", {rarity: 9, minTime: 3.3, minPrice: 7800, maxPrice: 9700, price: randomRange(7800, 9700)})
-.set("hitmonlee", {rarity: 6, minTime: 3.1, minPrice: 8000, maxPrice: 10300, price: randomRange(8000, 10300)})
-.set("hitmonchan", {rarity: 6, minTime: 3.1, minPrice: 8000, maxPrice: 10300, price: randomRange(8000, 10300)})
-.set("lickitung", {rarity: 8, minTime: 3.3, minPrice: 7000, maxPrice: 9000, price: randomRange(7000, 9000)})
-.set("koffing", {rarity: 25, minTime: 4, minPrice: 4000, maxPrice: 5000, price: randomRange(4000, 5000)})
-.set("weezing", {rarity: 7, minTime: 3.2, minPrice: 9000, maxPrice: 11500, price: randomRange(9000, 11500)})
-.set("rhyhorn", {rarity: 20, minTime: 4, minPrice: 5000, maxPrice: 6000, price: randomRange(5000, 6000)})
-.set("rhydon", {rarity: 6, minTime: 3.1, minPrice: 9800, maxPrice: 12300, price: randomRange(9800, 12300)})
-.set("chansey", {rarity: 2, minTime: 2.7, minPrice: 20000, maxPrice: 23000, price: randomRange(20000, 23000)})
-.set("tangela", {rarity: 9, minTime: 3.3, minPrice: 6800, maxPrice: 8600, price: randomRange(7000, 8600)})
-.set("kangaskhan", {rarity: 4, minTime: 2.9, minPrice: 10800, maxPrice: 13600, price: randomRange(10800, 13600)})
-.set("horsea", {rarity: 17, minTime: 3.5, minPrice: 4200, maxPrice: 5100, price: randomRange(4200, 5100)})
-.set("seadra", {rarity: 8, minTime: 3.3, minPrice: 8500, maxPrice: 11600, price: randomRange(8500, 11600)})
-.set("goldeen", {rarity: 35, minTime: 6, minPrice: 3500, maxPrice: 4100, price: randomRange(3500, 4100)})
-.set("seaking", {rarity: 10, minTime: 3.5, minPrice: 7200, maxPrice: 8300, price: randomRange(7200, 8300)})
-.set("staryu", {rarity: 15, minTime: 3.5, minPrice: 5800, maxPrice: 6100, price: randomRange(5800, 6100)})
-.set("starmie", {rarity: 3, minTime: 2.8, minPrice: 10000, maxPrice: 13000, price: randomRange(10000, 13000)})
-.set("mr-mime", {rarity: 8, minTime: 3.3, minPrice: 7500, maxPrice: 9000, price: randomRange(7500, 9000)})
-.set("scyther", {rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
-.set("jynx", {rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
-.set("electabuzz", {rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
-.set("magmar", {rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
-.set("pinsir", {rarity: 4, minTime: 2.9, minPrice: 12000, maxPrice: 14000, price: randomRange(12000, 14000)})
-.set("tauros", {rarity: 4, minTime: 2.9, minPrice: 12000, maxPrice: 14000, price: randomRange(12000, 14000)})
-.set("magikarp", {rarity: 80, minTime: 15, minPrice: 1400, maxPrice: 2000, price: randomRange(1400, 2000)})
-.set("gyarados", {rarity: 2, minTime: 2.7, minPrice: 30000, maxPrice: 36500, price: randomRange(30000, 36500)})
-.set("lapras", {rarity: 2, minTime: 2.7, minPrice: 30000, maxPrice: 36500, price: randomRange(30000, 36500)})
-.set("ditto", {rarity: 10, minTime: 3.5, minPrice: 5000, maxPrice: 6800, price: randomRange(5000, 6800)})
-.set("eevee", {rarity: 3, minTime: 2.8, minPrice: 8500, maxPrice: 12000, price: randomRange(8500, 12000)})
-.set("vaporeon", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("jolteon", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("flareon", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("porygon", {rarity: 7, minTime: 3.2, minPrice: 7000, maxPrice: 9500, price: randomRange(7000, 9500)})
-.set("omanyte", {rarity: 7, minTime: 3.2, minPrice: 6700, maxPrice: 10000, price: randomRange(6700, 10000)})
-.set("omastar", {rarity: 4, minTime: 2.9, minPrice: 13800, maxPrice: 17500, price: randomRange(13800, 17500)})
-.set("kabuto", {rarity: 7, minTime: 3.2, minPrice: 6700, maxPrice: 10000, price: randomRange(6700, 10000)})
-.set("kabutops", {rarity: 4, minTime: 2.9, minPrice: 13800, maxPrice: 17500, price: randomRange(13800, 17500)})
-.set("aerodactyl", {rarity: 2, minTime: 2.7, minPrice: 28800, maxPrice: 37600, price: randomRange(28800, 37600)})
-.set("snorlax", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("articuno", {rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
-.set("zapdos", {rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
-.set("moltres", {rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
-.set("dratini", {rarity: 7, minTime: 3.2, minPrice: 5800, maxPrice: 8900, price: randomRange(5800, 8900)})
-.set("dragonair", {rarity: 5, minTime: 3.0, minPrice: 9800, maxPrice: 14400, price: randomRange(9800, 14400)})
-.set("dragonite", {rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
-.set("mewtwo", {rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
-.set("mew", {rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)});
+extraData.set("bulbasaur", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
+.set("ivysaur", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
+.set("venusaur", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("charmander", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
+.set("charmeleon", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
+.set("charizard", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("squirtle", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 13000, maxPrice: 16000, price: randomRange(13000, 16000)})
+.set("wartortle", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 16000, maxPrice: 20000, price: randomRange(16000, 20000)})
+.set("blastoise", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("caterpie", {multiplier: 0.1, rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("metapod", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 4000, maxPrice: 5500, price: randomRange(4000, 5500)})
+.set("butterfree", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 6000, maxPrice: 8500, price: randomRange(6000, 8500)})
+.set("weedle", {multiplier: 0.1, rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("kakuna", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 4000, maxPrice: 5500, price: randomRange(4000, 5500)})
+.set("beedrill", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 6000, maxPrice: 8500, price: randomRange(6000, 8500)})
+.set("pidgey", {multiplier: 0.1, rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("pidgeotto", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 5000, maxPrice: 7000, price: randomRange(5000, 7000)})
+.set("pidgeot", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 8000, maxPrice: 11000, price: randomRange(8000, 11000)})
+.set("rattata", {multiplier: 0.1, rarity: 75, minTime: 12, minPrice: 2000, maxPrice: 3200, price: randomRange(2000, 3200)})
+.set("raticate", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 6500, price: randomRange(4000, 6500)})
+.set("spearow", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3300, maxPrice: 4800, price: randomRange(3300, 4800)})
+.set("fearow", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
+.set("ekans", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3300, maxPrice: 4800, price: randomRange(3300, 4800)})
+.set("arbok", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
+.set("pikachu", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 9000, maxPrice: 12500, price: randomRange(9000, 12500)})
+.set("raichu", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 13000, maxPrice: 15000, price: randomRange(13000, 15000)})
+.set("sandshrew", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3400, maxPrice: 4700, price: randomRange(3400, 4700)})
+.set("sandslash", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 6800, maxPrice: 8800, price: randomRange(6800, 8800)})
+.set("nidoran-f", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3000, maxPrice: 4400, price: randomRange(3000, 4400)})
+.set("nidorina", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 5000, maxPrice: 7700, price: randomRange(5000, 7700)})
+.set("nidoqueen", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 9500, maxPrice: 13600, price: randomRange(9500, 13000)})
+.set("nidoran-m", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3000, maxPrice: 4400, price: randomRange(3000, 4400)})
+.set("nidorino", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 5000, maxPrice: 7700, price: randomRange(5000, 7700)})
+.set("nidoking", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 9500, maxPrice: 13600, price: randomRange(9500, 13600)})
+.set("clefairy", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3000, maxPrice: 5300, price: randomRange(3000, 5300)})
+.set("clefable", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 8400, maxPrice: 11000, price: randomRange(8400, 11000)})
+.set("vulpix", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 8000, maxPrice: 11900, price: randomRange(8000, 11900)})
+.set("ninetales", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 25000, maxPrice: 28500, price: randomRange(25000, 28500)})
+.set("jigglypuff", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3000, maxPrice: 5300, price: randomRange(3000, 5300)})
+.set("wigglytuff", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 8400, maxPrice: 11000, price: randomRange(8400, 11000)})
+.set("zubat", {multiplier: 0.1, rarity: 80, minTime: 15, minPrice: 1000, maxPrice: 1600, price: randomRange(1000, 1600)})
+.set("golbat", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 5000, maxPrice: 6000, price: randomRange(5000, 6000)})
+.set("oddish", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3800, maxPrice: 4600, price: randomRange(3800, 4600)})
+.set("gloom", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 5800, maxPrice: 7300, price: randomRange(5800, 7300)})
+.set("vileplume", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 9800, maxPrice: 12400, price: randomRange(9800, 12400)})
+.set("paras", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 2400, maxPrice: 3100, price: randomRange(2400, 3100)})
+.set("parasect", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 5800, maxPrice: 8000, price: randomRange(5800, 8000)})
+.set("venonat", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 2800, maxPrice: 3400, price: randomRange(2800, 3400)})
+.set("venomoth", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 7400, maxPrice: 9600, price: randomRange(7400, 9600)})
+.set("diglett", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 2800, maxPrice: 3500, price: randomRange(2800, 3500)})
+.set("dugtrio", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 7000, maxPrice: 9000, price: randomRange(7000, 9000)})
+.set("meowth", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3800, maxPrice: 4800, price: randomRange(3800, 4800)})
+.set("persian", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 6800, maxPrice: 8500, price: randomRange(6800, 8500)})
+.set("psyduck", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 4800, maxPrice: 5700, price: randomRange(4800, 5700)})
+.set("golduck", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 7000, maxPrice: 10400, price: randomRange(7000, 10400)})
+.set("mankey", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 5900, price: randomRange(4000, 5900)})
+.set("primeape", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 8500, maxPrice: 12500, price: randomRange(8500, 12500)})
+.set("growlithe", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 8000, maxPrice: 11900, price: randomRange(8000, 11900)})
+.set("arcanine", {multiplier: 2.5, rarity: 2, minTime: 2.7, minPrice: 30000, maxPrice: 40000, price: randomRange(30000, 40000)})
+.set("poliwag", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3500, maxPrice: 4400, price: randomRange(3500, 4400)})
+.set("poliwhirl", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 5000, maxPrice: 6900, price: randomRange(5000, 6900)})
+.set("poliwrath", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 9900, maxPrice: 13300, price: randomRange(9900, 13300)})
+.set("abra", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 4800, maxPrice: 5800, price: randomRange(4800, 5800)})
+.set("kadabra", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 6000, maxPrice: 8000, price: randomRange(6000, 8000)})
+.set("alakazam", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 14000, maxPrice: 17700, price: randomRange(14000, 17700)})
+.set("machop", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 4000, maxPrice: 4600, price: randomRange(4000, 4600)})
+.set("machoke", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 6500, maxPrice: 9000, price: randomRange(6500, 9000)})
+.set("machamp", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 11800, maxPrice: 16600, price: randomRange(11800, 16600)})
+.set("bellsprout", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 2800, maxPrice: 3500, price: randomRange(2800, 3500)})
+.set("weepinbell", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 4900, maxPrice: 6000, price: randomRange(4900, 6000)})
+.set("victreebel", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 9400, maxPrice: 13400, price: randomRange(9400, 13400)})
+.set("tentacool", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3300, maxPrice: 5000, price: randomRange(3300, 5000)})
+.set("tentacruel", {multiplier: 1.3, rarity: 7, minTime: 3.2, minPrice: 8800, maxPrice: 12400, price: randomRange(8800, 12400)})
+.set("geodude", {multiplier: 0.3, rarity: 40, minTime: 9, minPrice: 3100, maxPrice: 4100, price: randomRange(3100, 4100)})
+.set("graveler", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 5400, maxPrice: 7000, price: randomRange(5400, 7000)})
+.set("golem", {multiplier: 1.4, rarity: 6, minTime: 3.1, minPrice: 8900, maxPrice: 13000, price: randomRange(8900, 13000)})
+.set("ponyta", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 7800, maxPrice: 10800, price: randomRange(7800, 10800)})
+.set("rapidash", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 11800, maxPrice: 14600, price: randomRange(11800, 14600)})
+.set("slowpoke", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 4800, maxPrice: 5700, price: randomRange(4800, 5700)})
+.set("slowbro", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 10000, maxPrice: 12900, price: randomRange(10000, 12900)})
+.set("magnemite", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 3800, maxPrice: 4300, price: randomRange(3800, 4300)})
+.set("magneton", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 8500, maxPrice: 10100, price: randomRange(8500, 10100)})
+.set("farfetchd", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 6800, maxPrice: 8200, price: randomRange(6800, 8200)})
+.set("doduo", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 4500, maxPrice: 5600, price: randomRange(4500, 5600)})
+.set("dodrio", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 8000, maxPrice: 11000, price: randomRange(9000, 11000)})
+.set("seel", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 4200, maxPrice: 6000, price: randomRange(4200, 6000)})
+.set("dewgong", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 8500, maxPrice: 12400, price: randomRange(8500, 12400)})
+.set("grimer", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 4000, maxPrice: 5000, price: randomRange(4000, 5000)})
+.set("muk", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 8800, maxPrice: 11000, price: randomRange(8800, 11000)})
+.set("shellder", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 3800, maxPrice: 5000, price: randomRange(3800, 5000)})
+.set("cloyster", {multiplier: 1.1, rarity: 9, minTime: 3.3, minPrice: 9000, maxPrice: 12000, price: randomRange(9000, 12000)})
+.set("gastly", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 4700, maxPrice: 6000, price: randomRange(4700, 6000)})
+.set("haunter", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 8500, maxPrice: 10000, price: randomRange(8500, 10000)})
+.set("gengar", {multiplier: 2.5, rarity: 2, minTime: 2.7, minPrice: 20000, maxPrice: 25000, price: randomRange(20000, 25000)})
+.set("onix", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 7000, maxPrice: 8000, price: randomRange(7000, 8000)})
+.set("drowzee", {multiplier: 0.5, rarity: 30, minTime: 6, minPrice: 3700, maxPrice: 4300, price: randomRange(3700, 4300)})
+.set("hypno", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 7800, maxPrice: 9500, price: randomRange(7800, 9500)})
+.set("krabby", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 3500, maxPrice: 4000, price: randomRange(3500, 4000)})
+.set("kingler", {multiplier: 1.1, rarity: 9, minTime: 3.3, minPrice: 7500, maxPrice: 9000, price: randomRange(7500, 9000)})
+.set("voltorb", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 4000, maxPrice: 4800, price: randomRange(4000, 4800)})
+.set("electrode", {multiplier: 1.1, rarity: 9, minTime: 3.3, minPrice: 8000, maxPrice: 11000, price: randomRange(8000, 11000)})
+.set("exeggcute", {multiplier: 1, rarity: 18, minTime: 3.5, minPrice: 5800, maxPrice: 6200, price: randomRange(5800, 6200)})
+.set("exeggutor", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 12000, maxPrice: 15400, price: randomRange(12000, 15400)})
+.set("cubone", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3800, maxPrice: 4700, price: randomRange(3800, 4700)})
+.set("marowak", {multiplier: 1.1, rarity: 9, minTime: 3.3, minPrice: 7800, maxPrice: 9700, price: randomRange(7800, 9700)})
+.set("hitmonlee", {multiplier: 1.4, rarity: 6, minTime: 3.1, minPrice: 8000, maxPrice: 10300, price: randomRange(8000, 10300)})
+.set("hitmonchan", {multiplier: 1.4, rarity: 6, minTime: 3.1, minPrice: 8000, maxPrice: 10300, price: randomRange(8000, 10300)})
+.set("lickitung", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 7000, maxPrice: 9000, price: randomRange(7000, 9000)})
+.set("koffing", {multiplier: 0.5, rarity: 25, minTime: 4, minPrice: 4000, maxPrice: 5000, price: randomRange(4000, 5000)})
+.set("weezing", {multiplier: 1.3, rarity: 7, minTime: 3.2, minPrice: 9000, maxPrice: 11500, price: randomRange(9000, 11500)})
+.set("rhyhorn", {multiplier: 0.7, rarity: 20, minTime: 4, minPrice: 5000, maxPrice: 6000, price: randomRange(5000, 6000)})
+.set("rhydon", {multiplier: 1.4, rarity: 6, minTime: 3.1, minPrice: 9800, maxPrice: 12300, price: randomRange(9800, 12300)})
+.set("chansey", {multiplier: 2.5, rarity: 2, minTime: 2.7, minPrice: 20000, maxPrice: 23000, price: randomRange(20000, 23000)})
+.set("tangela", {multiplier: 1.1, rarity: 9, minTime: 3.3, minPrice: 6800, maxPrice: 8600, price: randomRange(7000, 8600)})
+.set("kangaskhan", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 10800, maxPrice: 13600, price: randomRange(10800, 13600)})
+.set("horsea", {multiplier: 1, rarity: 17, minTime: 3.5, minPrice: 4200, maxPrice: 5100, price: randomRange(4200, 5100)})
+.set("seadra", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 8500, maxPrice: 11600, price: randomRange(8500, 11600)})
+.set("goldeen", {multiplier: 0.3, rarity: 35, minTime: 6, minPrice: 3500, maxPrice: 4100, price: randomRange(3500, 4100)})
+.set("seaking", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 7200, maxPrice: 8300, price: randomRange(7200, 8300)})
+.set("staryu", {multiplier: 1, rarity: 15, minTime: 3.5, minPrice: 5800, maxPrice: 6100, price: randomRange(5800, 6100)})
+.set("starmie", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 10000, maxPrice: 13000, price: randomRange(10000, 13000)})
+.set("mr-mime", {multiplier: 1.3, rarity: 8, minTime: 3.3, minPrice: 7500, maxPrice: 9000, price: randomRange(7500, 9000)})
+.set("scyther", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
+.set("jynx", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
+.set("electabuzz", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
+.set("magmar", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 10000, maxPrice: 12700, price: randomRange(10000, 12700)})
+.set("pinsir", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 12000, maxPrice: 14000, price: randomRange(12000, 14000)})
+.set("tauros", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 12000, maxPrice: 14000, price: randomRange(12000, 14000)})
+.set("magikarp", {multiplier: 0.1, rarity: 80, minTime: 15, minPrice: 1400, maxPrice: 2000, price: randomRange(1400, 2000)})
+.set("gyarados", {multiplier: 2.5, rarity: 2, minTime: 2.7, minPrice: 30000, maxPrice: 36500, price: randomRange(30000, 36500)})
+.set("lapras", {multiplier: 2.5, rarity: 2, minTime: 2.7, minPrice: 30000, maxPrice: 36500, price: randomRange(30000, 36500)})
+.set("ditto", {multiplier: 1.1, rarity: 10, minTime: 3.5, minPrice: 5000, maxPrice: 6800, price: randomRange(5000, 6800)})
+.set("eevee", {multiplier: 2, rarity: 3, minTime: 2.8, minPrice: 8500, maxPrice: 12000, price: randomRange(8500, 12000)})
+.set("vaporeon", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("jolteon", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("flareon", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("porygon", {multiplier: 1.3, rarity: 7, minTime: 3.2, minPrice: 7000, maxPrice: 9500, price: randomRange(7000, 9500)})
+.set("omanyte", {multiplier: 1.3, rarity: 7, minTime: 3.2, minPrice: 6700, maxPrice: 10000, price: randomRange(6700, 10000)})
+.set("omastar", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 13800, maxPrice: 17500, price: randomRange(13800, 17500)})
+.set("kabuto", {multiplier: 1.3, rarity: 7, minTime: 3.2, minPrice: 6700, maxPrice: 10000, price: randomRange(6700, 10000)})
+.set("kabutops", {multiplier: 1.8, rarity: 4, minTime: 2.9, minPrice: 13800, maxPrice: 17500, price: randomRange(13800, 17500)})
+.set("aerodactyl", {multiplier: 2.5, rarity: 2, minTime: 2.7, minPrice: 28800, maxPrice: 37600, price: randomRange(28800, 37600)})
+.set("snorlax", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("articuno", {multiplier: 3, rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
+.set("zapdos", {multiplier: 3, rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
+.set("moltres", {multiplier: 3, rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
+.set("dratini", {multiplier: 1.3, rarity: 7, minTime: 3.2, minPrice: 5800, maxPrice: 8900, price: randomRange(5800, 8900)})
+.set("dragonair", {multiplier: 1.6, rarity: 5, minTime: 3.0, minPrice: 9800, maxPrice: 14400, price: randomRange(9800, 14400)})
+.set("dragonite", {multiplier: 3, rarity: 1, minTime: 2.5, minPrice: 45000, maxPrice: 60000, price: randomRange(45000, 60000)})
+.set("mewtwo", {multiplier: 3, rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)})
+.set("mew", {multiplier: 3, rarity: 1, minTime: 2.4, minPrice: 90000, maxPrice: 125000, price: randomRange(90000, 125000)});
 
 const fetchPokemon = () => {
   let promises = [];
@@ -194,8 +194,8 @@ const fetchPokemon = () => {
       selected: false,
       onscreen: false
     }));
-    setInterval(mainGame, randomRange(30000, 45000));
-    // mainGame();
+    // setInterval(mainGame, randomRange(30000, 45000));
+    mainGame();
   });  
 }
 
@@ -313,98 +313,10 @@ const createButton = function(obj) {
           // alert(`Too slow! ${obj.name} is sold out!`);
           renderModalContent(obj, timeToPurchase);
           modal1.showModal(); 
-        } else if (localStorage.getItem(obj.name + obj.id)) {
-          let rarity = extraData.get(obj.name).rarity;
-          let multiplier;
-          switch (rarity) {
-            case 80:
-            case 75:
-              multiplier = 0.1;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 40:
-            case 35:
-              multiplier = 0.3;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 30:
-            case 25:
-              multiplier = 0.5;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 20:
-              multiplier = 0.7;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 18:
-            case 17:
-            case 15:
-              multiplier = 1;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 10:
-            case 9:
-              multiplier = 1.1;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 8:
-            case 7:
-              multiplier = 1.3;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 6:
-              multiplier = 1.4;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 5:
-              multiplier = 1.6;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 4:
-              multiplier = 1.8;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 3:
-              multiplier = 2;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 2:
-              multiplier = 2.5;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;
-            case 1:
-              multiplier = 3;
-              updateDuplicatePurchase(playerCoins, inputValue, multiplier, div);
-              renderModal4Content(obj, timeToPurchase, multiplier, inputValue);
-              modal4.showModal();
-              break;            
-            default:
-              alert("error");    
-          } 
+        } else if (localStorage.getItem(obj.name + obj.id) && inputValue >= price) {
+          updateDuplicatePurchase(playerCoins, inputValue, obj, div);
+          renderModal4Content(obj, timeToPurchase, inputValue);
+          modal4.showModal(); 
         } else if (inputValue === price || inputValue > price && inputValue <= Math.ceil(1.5 * price)) {
           updateChanges(playerCoins, buttonClicked, div, inputValue);
           // alert(`Congratulations! ${obj.name} has been added to your collection!`);
@@ -413,10 +325,16 @@ const createButton = function(obj) {
         } else if (inputValue < price && inputValue >= Math.ceil(price * 0.95)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 95) {
-            updateChanges(playerCoins, buttonClicked, div, inputValue);
-            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            renderModalContent(obj, timeToPurchase);
-            modal1.showModal();
+            if (localStorage.getItem(obj.name + obj.id)) {
+              updateDuplicatePurchase(playerCoins, inputValue, obj, div);
+              renderModal4Content(obj, timeToPurchase, inputValue);
+              modal4.showModal();
+            } else {
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+              renderModalContent(obj, timeToPurchase);
+              modal1.showModal();
+            }
           } else {
             // alert("offer toooooo low");
             renderModal3Content(obj, timeToPurchase);
@@ -426,10 +344,16 @@ const createButton = function(obj) {
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.90)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 90) {
-            updateChanges(playerCoins, buttonClicked, div, inputValue);
-            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            renderModalContent(obj, timeToPurchase);
-            modal1.showModal(); 
+            if (localStorage.getItem(obj.name + obj.id)) {
+              updateDuplicatePurchase(playerCoins, inputValue, obj, div);
+              renderModal4Content(obj, timeToPurchase, inputValue);
+              modal4.showModal();
+            } else {
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+              renderModalContent(obj, timeToPurchase);
+              modal1.showModal();
+            }  
           } else {
             // alert("offer toooooo low");
             renderModal3Content(obj, timeToPurchase);
@@ -439,10 +363,16 @@ const createButton = function(obj) {
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.85)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 85) {
-            updateChanges(playerCoins, buttonClicked, div, inputValue);
-            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            renderModalContent(obj, timeToPurchase);
-            modal1.showModal();  
+            if (localStorage.getItem(obj.name + obj.id)) {
+              updateDuplicatePurchase(playerCoins, inputValue, obj, div);
+              renderModal4Content(obj, timeToPurchase, inputValue);
+              modal4.showModal();
+            } else {
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+              renderModalContent(obj, timeToPurchase);
+              modal1.showModal();
+            }  
           } else {
             // alert("offer toooooo low");
             renderModal3Content(obj, timeToPurchase);
@@ -452,10 +382,16 @@ const createButton = function(obj) {
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.80)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 80) {
-            updateChanges(playerCoins, buttonClicked, div, inputValue);
-            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            renderModalContent(obj, timeToPurchase);
-            modal1.showModal(); 
+            if (localStorage.getItem(obj.name + obj.id)) {
+              updateDuplicatePurchase(playerCoins, inputValue, obj, div);
+              renderModal4Content(obj, timeToPurchase, inputValue);
+              modal4.showModal();
+            } else {
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+              renderModalContent(obj, timeToPurchase);
+              modal1.showModal();
+            } 
           } else {
             // alert("offer toooooo low");
             renderModal3Content(obj, timeToPurchase);
@@ -465,10 +401,16 @@ const createButton = function(obj) {
         } else if (inputValue < price && inputValue >=  Math.ceil(price * 0.75)){
           let num = Math.ceil(Math.random() * 100);
           if (num <= 75) {
-            updateChanges(playerCoins, buttonClicked, div, inputValue);
-            // alert(`Congratulations! ${obj.name} has been added to your collection!`);
-            renderModalContent(obj, timeToPurchase); 
-            modal1.showModal();
+            if (localStorage.getItem(obj.name + obj.id)) {
+              updateDuplicatePurchase(playerCoins, inputValue, obj, div);
+              renderModal4Content(obj, timeToPurchase, inputValue);
+              modal4.showModal();
+            } else {
+              updateChanges(playerCoins, buttonClicked, div, inputValue);
+              // alert(`Congratulations! ${obj.name} has been added to your collection!`);
+              renderModalContent(obj, timeToPurchase);
+              modal1.showModal();
+            }
           } else {
             // alert("offer toooooo low");
             renderModal3Content(obj, timeToPurchase);
@@ -625,9 +567,9 @@ const updateChanges = function(coins, buttonName, divToRemove, inputVal) {
   divToRemove.remove();
 }
 
-const updateDuplicatePurchase = function(coins, inputVal, muliplier, divToRemove) {
+const updateDuplicatePurchase = function(coins, inputVal, obj, divToRemove) {
   coins = coins - inputVal;
-  coins = coins + (Math.ceil(inputVal * muliplier));
+  coins = coins + (Math.ceil(inputVal * extraData.get(obj.name).multiplier));
   localStorage.setItem("coins", coins);
   displayCoins(coins);
   divToRemove.remove();
@@ -689,8 +631,7 @@ const renderModal3Content = function(obj, userTime) {
   time.innerHTML = userTime + "s";
 }
 
-const renderModal4Content = function(obj, userTime, multiplier, inputVal) {
-  console.log('starton');
+const renderModal4Content = function(obj, userTime, inputVal) {
   let result = document.getElementById("result4");
   let resultMessage = document.getElementById("result-message4");
   let secondMessage = document.getElementById("coin-return");
@@ -700,10 +641,9 @@ const renderModal4Content = function(obj, userTime, multiplier, inputVal) {
   result.innerHTML = "Duplicate Purchase";
   result.style.color = "hsl(300, 100%, 45%)";
   resultMessage.innerHTML = "You already have this pokemon!";
-  console.log('xxx', multiplier);
-  secondMessage.innerHTML = `You resell your duplicate for <span id="profit">${numberFormatter.format(Math.ceil(multiplier * inputVal))}</span> coins.`;
+  secondMessage.innerHTML = `You resell your duplicate for <span id="profit">${numberFormatter.format(Math.ceil(calcProfit(obj, inputVal)))}</span> coins.`;
   let profit = document.getElementById("profit");
-  console.log(multiplier);
+  let multiplier = extraData.get(obj.name).multiplier;
   if (multiplier < 1) {
     profit.style.color = "red";
   } else if (multiplier === 1) {
@@ -715,3 +655,10 @@ const renderModal4Content = function(obj, userTime, multiplier, inputVal) {
   rarity.innerHTML = extraData.get(obj.name).rarity;
   time.innerHTML = userTime + "s";
 }
+
+const calcProfit = function (obj, inputValue) {
+  let multiplier = extraData.get(obj.name).multiplier;
+  let profit = inputValue * multiplier;
+  return profit;
+};
+
