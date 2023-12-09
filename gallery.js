@@ -171,7 +171,7 @@ const fetchPokemon = () => {
     displayPokedex(pokemonArr);
     displayBoughtPokemon();
     changeToolTipColour();
-    // makeNamePokemonColors();
+    makeShine();
   });  
 }
 
@@ -255,13 +255,13 @@ const displayBoughtPokemon = function() {
   })
 }
 
-// const makeNamePokemonColors = function() {
-//   let namesArr = document.querySelectorAll(".name-text");
-//   console.log(namesArr);
-//   console.log(namesArr[0].attributes[1]);
-//   namesArr.forEach(pokeName => {
-//     if (localStorage.getItem(pokeName.attributes[1].value)) {
-//       pokeName.classList.add("purchased-pokemon");
-//     }
-//   })
-// }
+const makeShine = function() {
+  let namesArr = document.querySelectorAll(".name-text");
+  console.log(namesArr);
+  console.log(namesArr[0].attributes[1]);
+  namesArr.forEach(pokeName => {
+    if (localStorage.getItem(pokeName.attributes[1].value)) {
+      pokeName.classList.add("shine");
+    }
+  })
+}
