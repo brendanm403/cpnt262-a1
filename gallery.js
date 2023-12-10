@@ -265,3 +265,11 @@ const makeShine = function() {
     }
   })
 }
+
+const localStoragePokemon = function (){
+  let storagePokemon = {...localStorage};
+  let numberCollected = Object.keys(storagePokemon).length - 1;
+  return numberCollected;
+}
+
+localStoragePokemon();
