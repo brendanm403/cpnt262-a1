@@ -172,6 +172,7 @@ const fetchPokemon = () => {
     displayBoughtPokemon();
     changeToolTipColour();
     makeShine();
+    displayCollectionTotal();
   });  
 }
 
@@ -266,10 +267,10 @@ const makeShine = function() {
   })
 }
 
-const localStoragePokemon = function (){
+const displayCollectionTotal = function (){
   let storagePokemon = {...localStorage};
   let numberCollected = Object.keys(storagePokemon).length - 1;
-  return numberCollected;
+  let targetElement = document.getElementById("player-total");
+  targetElement.innerHTML = `${numberCollected}<span id="total-span">/</span>151`
 }
 
-localStoragePokemon();
