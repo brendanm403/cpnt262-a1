@@ -99,3 +99,16 @@ dialog {
   background: black;
   opacity: 0.6;
 }
+
+.modals[open] {
+  animation: slide-in 170ms ease;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
