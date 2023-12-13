@@ -101,7 +101,7 @@ dialog {
 }
 
 .modals[open] {
-  animation: slide-in 170ms ease;
+  animation: slide-in 100ms ease;
 }
 
 @keyframes slide-in {
